@@ -36,6 +36,23 @@ export function getUserById(req, res) {
   res.send(user)
 }
 
+export function updateUserById(req, res) {
+  const {
+    body,
+    params: { userId }
+  } = req
+  const userIndex = users.findIndex(user => user.id === Number(req.params.userId))
+  const userToUpdate = users[userIndex]
+  if (!userToUpdate) {
+    res.status(404).send('cannot find user with id: ' + userId)
+  }
+  users[userIndex] = {
+    ...userToUpdate,
+    ...body, // lower down it is on the list, the more precendence it has
+  }
+
+  res.send(users)
+}
 
 export function getUsers(req, res) {
   res.send(users)

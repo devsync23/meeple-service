@@ -3,7 +3,8 @@ import bodyParser from 'body-parser'
 import {
   addUserToUsersList,
   getUsers,
-  getUserById
+  getUserById,
+  updateUserById
 } from './users/user.controller.js'
 import { validateUserPost } from './users/user.middleware.js'
 
@@ -18,6 +19,7 @@ app.route('/users')
 
 app.route('/users/:userId')
   .get(getUserById)
+  .put(updateUserById)
 
 
 app.listen(port, () => {
