@@ -31,10 +31,25 @@ const users = [
     id: 1,
     name: "JB",
     email: "jb@jb.com"
-  }
+  },
+  {
+    id: 2,
+    name: "Daniel",
+    email: "DanTheMan.com"
+  },
+  {
+    id: 3,
+    name: "Andrew",
+    email: "Andrew.com"
+  },
+  {
+    id: 4,
+    name: "Dan Wang",
+    email: "Dan.com"
+  },
 ]
 
-function handleGetUsers(req, res) {
+function getUsers(req, res) {
   res.send(users)
 }
 
@@ -56,11 +71,23 @@ function addUserToUsersList(req, res, next) {
   res.send(users)
 }
 
+function getUserById(req, res) {
+  console.log(typeof req.params.userId)
+  const user = users.find(user => user.id === Number(req.params.userId))
+  if (!user) {
+    res.status(404).send('Could not find user with id: ' + req.params.userId)
+  }
+  res.send(user)
+}
+
 app
   .route('/users')
-    .get(handleGetUsers)
+    .get(getUsers)
     .post(validateUserPost, addUserToUsersList)
-  
+
+app
+  .route('/users/:userId')
+    .get(getUserById)
 
 
 app.listen(port, () => {
