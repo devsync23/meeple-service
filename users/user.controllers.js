@@ -1,8 +1,7 @@
 import fs from "fs"
 
 export function registerUser(req, res){
-    const newUserData = req.body
-
+    const newUserData = req.body;
     const formattedUserData = {
         [newUserData.email]: {
             password: newUserData.password,
@@ -10,17 +9,16 @@ export function registerUser(req, res){
             verified: false
         }
     }
-    if(fs.readFileSync('./users/users.json').length === 0){
-        fs.writeFileSync('./users/users.json', JSON.stringify(formattedUserData, null, 4))
-        res.send(`you registered your user profile! ${newUserData.name}`)
+
+    let existingUserData = JSON.parse(fs.readFileSync('./users/users.json', 'utf8'))
+    if(existingUserData[newUserData.email]){
+            res.status = 404;
+            return res.send(`${newUserData.email} has already been registered`)
     }
-    else{
-        let newUserData = JSON.parse(fs.readFileSync('./users/users.json', 'utf8'))
-        // console.log(newUserData,formattedUserData)
-        newUserData ={...newUserData,...formattedUserData }
-        fs.writeFileSync('./users/users.json', JSON.stringify(newUserData, null, 4))
-        res.send(`you registered your user profile! ${newUserData.name}`)
-    }
+    // if the above condition is trigger, the following codes wont be triggered
+    existingUserData = {...existingUserData, ...formattedUserData }
+    fs.writeFileSync('./users/users.json', JSON.stringify(existingUserData, null, 4))
+    res.send(`you registered your user profile! ${newUserData.name}`)
 }
 
 export function userLogin(req, res){

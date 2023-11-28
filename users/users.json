@@ -4,9 +4,14 @@
         "age": 25,
         "verified": false
     },
-    "Dan@jb.com": {
+    "Kun@jb.com": {
         "password": "haha",
-        "age": 21,
+        "age": 22,
+        "verified": false
+    },
+    "Andrew@jb.com": {
+        "password": "haha",
+        "age": 23,
         "verified": false
     }
 }
