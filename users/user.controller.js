@@ -10,7 +10,21 @@ export function registerUser(req, res) {
       verified: false,
     }
   }
-  fs.writeFileSync('./users/users.json', JSON.stringify(formattedUserData, null, 4))
+
+  // reads the existing users from the json files
+  const existingUsers = fs.readFileSync('./users/users.json', 'utf8');
+  if (existingUsers[newUserData.email]) {
+    res.status = 400
+    return res.send("user already exists")
+  }
+
+  // combine existing users with new user
+  const updatedUsersData = {
+    ...existingUsers,
+    ...newUserData
+  }
+
+  fs.writeFileSync('./users/users.json', JSON.stringify(updatedUsersData, null, 4))
   
   res.send("you registered your user!")
 }
