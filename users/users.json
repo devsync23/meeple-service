@@ -1,0 +1,14 @@
+{
+    "test12234@yo.com": {
+        "password": "MyPassword123",
+        "username": "SamsUserName",
+        "age": 28,
+        "verified": false
+    },
+    "test122654@yo.com": {
+        "password": "MyPassword123",
+        "username": "SamsUserName",
+        "age": 28,
+        "verified": false
+    }
+}
