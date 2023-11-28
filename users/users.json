@@ -1,0 +1,12 @@
+{
+    "Sammy@jb.com": {
+        "password": "haha123",
+        "age": 25,
+        "verified": false
+    },
+    "Dan@jb.com": {
+        "password": "haha",
+        "age": 21,
+        "verified": false
+    }
+}
