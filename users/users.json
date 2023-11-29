@@ -1,11 +1,7 @@
 {
-    "sam@sam.com": {
-        "password": "hahahahahaha",
-        "age": 29,
-        "verified": false
-    },
-    "jb@sam.com": {
-        "password": "hahahahahaha",
+    "jb@jdsfioa.com": {
+        "name": "JB",
+        "password": "gooble",
         "age": 29,
         "verified": false
     }
