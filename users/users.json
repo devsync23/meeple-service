@@ -1,0 +1,12 @@
+{
+    "dan@123.com": {
+        "name": "JB",
+        "password": "12345",
+        "verified": false
+    },
+    "jb@123.com": {
+        "name": "JB",
+        "password": "12345",
+        "verified": false
+    }
+}

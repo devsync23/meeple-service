@@ -7,6 +7,7 @@ const port = 3000
 app.use(bodyParser.json())
 app.use('/users', userRouter)
 
+
 // express ROUTE
 // comprised of 3 things:
 // .METHOD() ---> HTTP method
