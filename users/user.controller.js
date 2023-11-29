@@ -1,12 +1,15 @@
-import fs from 'fs'
+import fs from "fs"
 
-export function registerUser(req, res) {
+export async function registerUser(req, res) {
+    // console.log("req . body from the controller function: ", req.body)
     const newUserData = req.body
+
     const formattedUserData = {
     [newUserData.email]: {
         name: newUserData.name,
         password: newUserData.password,
         age: newUserData.age,
+        phone: newUserData.phone,
         verified: false,
     }
     }

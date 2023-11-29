@@ -1,12 +1,16 @@
 {
-    "sam@sam.com": {
-        "password": "hahahahahaha",
+    "jb@jdsfioa.com": {
+        "name": "JB",
+        "password": "gooble",
+        "phone": 3107499800,
         "age": 29,
         "verified": false
     },
-    "jb@sam.com": {
-        "password": "hahahahahaha",
+    "jbfdfd@jdsfioa.com": {
+        "name": "JB",
+        "password": "gooble",
         "age": 29,
+        "phone": 1235557781,
         "verified": false
     }
 }
