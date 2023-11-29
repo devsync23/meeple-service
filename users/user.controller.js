@@ -1,14 +1,13 @@
 import fs from 'fs'
-export function registerUser(req, res) {
+import bcrypt from 'bcrypt'
+export async function registerUser(req, res) {
     const newUserData = req.body
     const formattedUserData = {
         [newUserData.email]: {
-            name: newUserData.name,
             password: newUserData.password,
             age: newUserData.age,
             phone: newUserData.phone,
             verified: false
-
         }
     }
     // reads the existing users from the json files
