@@ -1,13 +1,10 @@
 import  express from "express";
 import { registerUser, userLogin } from "./user.controller.js";
+import { validateRegisterData, validateLoginData } from "./user.middleware.js";
 
 const router = express.Router()
 
-function ourFirstMiddleware(req, res, next) {
-    console.log('hello from middleware')
-    next()
-}
-router.post('/register', ourFirstMiddleware, registerUser)
-router.post('/login', userLogin)
+router.post('/register', validateRegisterData, registerUser)
+router.post('/login', validateLoginData, userLogin)
 
 export default router

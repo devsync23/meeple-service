@@ -1,0 +1,8 @@
+{
+    "ddd@123.com": {
+        "name": "JB",
+        "password": "12345",
+        "age": "22",
+        "verified": false
+    }
+}
