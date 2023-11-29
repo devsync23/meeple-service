@@ -7,6 +7,7 @@ export function registerUser(req, res) {
       name: newUserData.name,
       password: newUserData.password,
       age: newUserData.age,
+      phone: newUserData.phone,
       verified: false,
     }
   }

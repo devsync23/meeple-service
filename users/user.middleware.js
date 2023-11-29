@@ -6,6 +6,7 @@ export function validateRegisterData(req, res, next) {
     || !req.body.password
     || !req.body.name
     || !req.body.age
+    || !req.body.phone
   ) {
     return res.send('could not regsiter user')
   }

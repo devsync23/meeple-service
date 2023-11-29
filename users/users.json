@@ -2,7 +2,15 @@
     "jb@jdsfioa.com": {
         "name": "JB",
         "password": "gooble",
+        "phone": 3107499800,
         "age": 29,
+        "verified": false
+    },
+    "jbfdfd@jdsfioa.com": {
+        "name": "JB",
+        "password": "gooble",
+        "age": 29,
+        "phone": 1235557781,
         "verified": false
     }
 }
