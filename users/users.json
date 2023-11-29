@@ -1,7 +1,9 @@
 {
-    "123@123.com": {
-        "password": "1234",
+    "null": {
+        "name": "X",
+        "password": "null",
         "age": 14,
+        "phone": 123456788,
         "verified": false
     }
 }
