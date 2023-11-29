@@ -2,20 +2,19 @@ import fs from 'fs';
 
 export function registerUser(req, res) {
     const newUserData = req.body
-    const { email, username, password, age } = newUserData
     const formattedUserData = {
-        [email]: {
-            password: password,
-            username: username,
-            age: age,
+        [newUserData.email]: {
+            password: newUserData.password,
+            name: newUserData.name,
+            age: newUserData.age,
             verified: false,
         }
     }
     // reads the existing users from the json files
     const existingUsers = JSON.parse(fs.readFileSync('./users/users.json', 'utf-8'))
-    if (existingUsers[email]) {
+    if (existingUsers[newUserData.email]) {
         res.status = 404;
-        return res.send("user already exists")
+        return res.send(`${newUserData.email} user already exists`)
     }
 
     const updatedUserList = {
@@ -31,8 +30,18 @@ export function registerUser(req, res) {
 }
 
 export function userLogin(req, res) {
-    // const { body } = req
-    res.send("you have sucessfully logged in!")
+    const newUserData = req.body
+    const formattedUserData = {
+        [newUserData.email]: {
+            password: newUserData.password,
+        }
+    }
+    const existingUsers = JSON.parse(fs.readFileSync('./users/users.json', 'utf-8'))
+    if (existingUsers[newUserData.email] && existingUsers[newUserData.password]) {
+        res.send("you have sucessfully logged in!")
+    }
+    res.status = 404;
+    return res.send(`password to email: ${newUserData.email} is incorrect`)
 }
 
 export function createMessage(req, res) {

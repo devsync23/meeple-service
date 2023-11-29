@@ -10,5 +10,23 @@
         "username": "SamsUserName",
         "age": 28,
         "verified": false
+    },
+    "yoyo@yo.com": {
+        "password": "MyPassword123",
+        "username": "SamsUserName",
+        "age": 28,
+        "verified": false
+    },
+    "kun@kun.com": {
+        "password": "MyPassword123",
+        "username": "SamsUserName",
+        "age": 28,
+        "verified": false
+    },
+    "yesterday@yesterday.com": {
+        "password": "MyPassword123",
+        "name": "SamsUserName",
+        "age": 28,
+        "verified": false
     }
 }

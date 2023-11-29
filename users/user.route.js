@@ -1,11 +1,14 @@
 import express from 'express'
 import { createMessage, registerUser, userLogin } from './user.controller.js'
+import { validateRegisterData, validateLoginData } from './user.middleware.js';
 
 const router = express.Router()
 
-router.post('/register', registerUser);
+router.post('/register', validateRegisterData, registerUser);
 
-router.post('/login', userLogin);
+router.post('/login', validateLoginData, userLogin);
+
+// router.get('/my-profile', getUserProfile)
 
 router.post('/message', createMessage);
 
