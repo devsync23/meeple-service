@@ -1,6 +1,14 @@
 
 export function validateRegisterData(req, res, next) {
-    console.log('hello from middleware!')
+    if (!req.body.email
+        || !req.body.password
+        || !req.body.age
+        || !req.body.name
+        || !req.body.phone
+    ) {
+        return res.send('data is not valid')
+    }
+
     next()
 }
 

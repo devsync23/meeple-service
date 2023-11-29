@@ -2,6 +2,7 @@
     "ddd@123.com": {
         "name": "JB",
         "password": "12345",
+        "phone": 123456789,
         "age": "22",
         "verified": false
     }
