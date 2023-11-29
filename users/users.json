@@ -1,17 +1,9 @@
 {
-    "Sammy@jb.com": {
-        "password": "haha123",
-        "age": 25,
-        "verified": false
-    },
-    "Kun@jb.com": {
+    "Saaaa123@jb.com": {
+        "name": "Danny",
         "password": "haha",
-        "age": 22,
-        "verified": false
-    },
-    "Andrew@jb.com": {
-        "password": "haha",
-        "age": 23,
+        "age": 21,
+        "phone": 4228589990,
         "verified": false
     }
 }

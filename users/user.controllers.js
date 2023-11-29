@@ -4,8 +4,10 @@ export function registerUser(req, res){
     const newUserData = req.body;
     const formattedUserData = {
         [newUserData.email]: {
+            name: newUserData.name,
             password: newUserData.password,
-            age: newUserData?.age,
+            age: newUserData.age,
+            phone: newUserData.phone,
             verified: false
         }
     }
@@ -25,9 +27,4 @@ export function userLogin(req, res){
     const body = req.body
     const userName = body.name
     res.send(`you have successfully logged in! ${body.name}`)
-}
-
-export function validateUser(req, res, next){
-    const newUser = req.body;
-    next()
 }
