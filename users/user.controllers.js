@@ -2,6 +2,7 @@ import fs from "fs"
 
 export function registerUser(req, res){
     const newUserData = req.body;
+    console.log(req.body)
     const formattedUserData = {
         [newUserData.email]: {
             name: newUserData.name,

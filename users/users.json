@@ -5,5 +5,12 @@
         "age": 21,
         "phone": 4228589990,
         "verified": false
+    },
+    "asdf@jdsfioa.com": {
+        "name": "JB",
+        "password": "$2b$10$MywcuN.CVpbc7NEpO6QKe.OYp3XUc/Kx6jHbFh7lWY2/.7QXZmDie",
+        "age": 29,
+        "phone": 1235557781,
+        "verified": false
     }
 }

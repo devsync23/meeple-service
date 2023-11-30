@@ -1,4 +1,13 @@
 import fs from "fs"
+import bcrypt from 'bcrypt'
+
+export async function hashUserPass(req, res, next) {
+    // hash the users password
+    const hashedPass = await bcrypt.hash(req.body.password, 10)
+    // update the req.body.password field to be the new hashed password
+    req.body.password = hashedPass
+    next()
+}
 
 export function validateRegisterData(req, res, next) {
     const newUserData = req.body;
