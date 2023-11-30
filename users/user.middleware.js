@@ -31,5 +31,8 @@ export function validateRegisterData(req, res, next) {
 }
 
 export function validateLoginData(req, res, next) {
+    if (!req.body.email || !req.body.password) {
+        return res.send('Email or password are not present')
+    }
     next()
 }

@@ -12,5 +12,12 @@
         "age": 29,
         "phone": 1235557781,
         "verified": false
+    },
+    "newperson@new.com": {
+        "name": "JB",
+        "password": "$2b$10$SNX2Hq4NXOQ04Wnm3ERRleYiIw.c3P0AFv5KYKrmteeV9cns9SxoS",
+        "age": 29,
+        "phone": 1235557781,
+        "verified": false
     }
 }
