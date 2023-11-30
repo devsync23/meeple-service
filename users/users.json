@@ -41,5 +41,19 @@
         "age": 28,
         "phoneNumber": "123-456-7891",
         "verified": false
+    },
+    "yesterday@tomorroow.com": {
+        "password": "$2b$10$Rj8YDjJASs1O8FUvi/CFTeLsk6b9YbEGvS4usOISj9sC4bOeyoge6",
+        "name": "SamsUserName",
+        "age": 28,
+        "phoneNumber": "123-456-7891",
+        "verified": false
+    },
+    "yesterday@riot.com": {
+        "password": "$2b$10$3uutDbJQH/NCAxsajoIileq3byupg85HikqXITz8gs.om/rm3dOW.",
+        "name": "SamsUserName",
+        "age": 28,
+        "phoneNumber": "123-456-7891",
+        "verified": false
     }
 }

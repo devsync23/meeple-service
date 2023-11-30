@@ -32,11 +32,12 @@ export async function registerUser(req, res) {
     res.send("you registered your user!")
 }
 
-export function userLogin(req, res) {
+export async function userLogin(req, res) {
     const userLoginData = req.body
     const existingUsers = JSON.parse(fs.readFileSync('./users/users.json', 'utf-8'))
-    if (existingUsers[userLoginData.email] && existingUsers[userLoginData.email].password) {
-        res.send("you have sucessfully logged in!")
+    const passwordCheck = await bcrypt.compare(userLoginData.password, existingUsers[userLoginData.email].password)
+    if (existingUsers[userLoginData.email] && passwordCheck) {
+        return res.send("you have sucessfully logged in!")
     }
     res.status = 404;
     return res.send(`password to email: ${userLoginData.email} is incorrect`)
