@@ -1,6 +1,6 @@
 import fs from "fs"
 
-export async function registerUser(req, res) {
+export function registerUser(req, res) {
     // console.log("req . body from the controller function: ", req.body)
     const newUserData = req.body
 
