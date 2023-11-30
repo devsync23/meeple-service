@@ -33,7 +33,6 @@ export function validateRegisterData(req, res, next) {
     // }
 
     // alternately: this is more client-friendly + more specific about what's invalid
-    console.log("hellooOOOOOOooOOOO?????????? :(")
     if (!req.body.email) {
         return res.send("email is not valid")
     }
@@ -54,5 +53,11 @@ export function validateRegisterData(req, res, next) {
 
 export function validateLoginData(req, res, next) {
     console.log('hello from middleware 2')
+    if (!req.body.email) {
+        return res.send("email is not valid")
+    }
+    if (!req.body.password) {
+        return res.send("password is not valid")
+    }
     next();
 }
