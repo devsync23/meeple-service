@@ -19,5 +19,12 @@
         "age": 29,
         "phone": 1235557781,
         "verified": false
+    },
+    "testuser@test.com": {
+        "name": "Test",
+        "password": "$2b$10$kPFQmF70O1NyTgXitTEg4u5mymC6.0OixSark.CqxtxJq7oM/Z62e",
+        "age": 30,
+        "phone": 555123456,
+        "verified": false
     }
 }
