@@ -28,5 +28,12 @@
         "phone": 11111111,
         "name": "JB",
         "verified": false
+    },
+    "l23456@123.com": {
+        "password": "$2b$10$fa/9gsLKF5mVisgX7/XPJevzpKyKX2gp1KVfJzsfT226UDRk8p7Xq",
+        "age": 22,
+        "phone": 123456789,
+        "name": "123",
+        "verified": false
     }
 }

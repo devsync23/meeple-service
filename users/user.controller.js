@@ -1,5 +1,6 @@
 import fs from 'fs'
 import bcrypt from 'bcrypt'
+import jwt from 'jsonwebtoken'
 export function registerUser(req, res) {
     const newUserData = req.body
     const formattedUserData = {
@@ -29,8 +30,15 @@ export function registerUser(req, res) {
     // console.log(exsitingUsers[newUserData.email])
 }
 
-export function userLogin(req, res) {
-    const  body  = req.body
-    console.log(req.body)
-    res.send('you successfully logged in')
+export async function userLogin(req, res) {
+    const  { email, password } = req.body
+    const existingUser = req.user
+    const doPasswordsMatch = await bcrypt.compare(password, existingUser.password)
+    if (doPasswordsMatch) {
+        delete email.password
+        const signedJWT = jwt.sign(existingUser, 'shhhhhh')
+        res.send(signedJWT)
+    } else {
+        res.send("sorry, we could not log you in")
+    }
 }
