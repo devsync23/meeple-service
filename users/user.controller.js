@@ -1,4 +1,6 @@
 import fs from "fs"
+import bcrypt from "bcrypt"
+import jwt from "jsonwebtoken"
 
 export function registerUser(req, res) {
     // console.log("req . body from the controller function: ", req.body)
@@ -36,8 +38,24 @@ export function registerUser(req, res) {
     res.send("you registered your user!")
 }
 
-export function userLogin(req, res) {
-    const body = req.body
-    console.log(req.body)
-    res.send({})
+/*
+What does it mean to login? Authenticate a user
+
+1. Ensure the user exists in our datastore
+2. Passwords match: compare the request password with the password saved in the datastore
+3. JWT generated and sent as a response to the client
+
+*/
+
+export async function userLogin(req, res) {
+    const { email, password } = req.body;
+    const existingUser = req.user;
+    const doPasswordsMatch = await bcrypt.compare(password, existingUser.password)
+    if (doPasswordsMatch) {
+        // generate a JWT
+        const signedJWT = jwt.sign(existingUser, "shhhhhhh");
+        res.send({signedJWT}); // not the most secure as is - ideally don't include password to send to client(s)
+    } else
+    res.send("could not log in");
+
 }

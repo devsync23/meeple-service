@@ -59,5 +59,14 @@ export function validateLoginData(req, res, next) {
     if (!req.body.password) {
         return res.send("password is not valid")
     }
+    const existingUsers = JSON.parse(fs.readFileSync("./users/users.json"))
+    if (existingUsers[req.body.email]) {
+        return res.send(`Could not login with email ${req.body.email}`)
+    } else {
+        // remember: req & res are middleware objects, they all have access to these
+        // adding user key to req {}
+        req.user = existingUsers[req.body.email]
+    }
+    console.log(req.user);
     next();
 }
