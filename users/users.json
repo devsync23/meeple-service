@@ -12,5 +12,40 @@
         "age": 29,
         "phone": 1235557781,
         "verified": false
+    },
+    "yesterday@riot.com": {
+        "name": "SamsUserName",
+        "password": "$2b$10$qNeg0eN7Ge.5.YPiJ.CBAeBEj.he3MLN8FIomzXhelMjNb5YmX5xm",
+        "age": 28,
+        "phone": 1234567891,
+        "verified": false
+    },
+    "yestasdfay@riot.com": {
+        "name": "SamsUserName",
+        "password": "$2b$10$UjKt9NpDgzMbYw7S4EFN0.6Of8RGfVH9cJFZWx6itGqrn5s8YUDuq",
+        "age": 28,
+        "phone": 1234567891,
+        "verified": false
+    },
+    "yestasdfasasdfay@riot.com": {
+        "name": "SamsUserName",
+        "password": "$2b$10$DyEBZ452WvM.Dgj/Tq29xuuhtfRnBk19QoE.sp2vSQkgrpHDkITx2",
+        "age": 28,
+        "phone": 1234567891,
+        "verified": false
+    },
+    "yestasdfsadfasasasdfay@riot.com": {
+        "name": "SamsUserName",
+        "password": "$2b$10$ZGqwshFk8j8fODuKxgQYyeovMvuvZfZKuxrJ6lEQrkC5RcPnDTBDO",
+        "age": 28,
+        "phone": 1234567891,
+        "verified": false
+    },
+    "test@riot.com": {
+        "name": "SamsUserName",
+        "password": "$2b$10$hbjR/JCqRIW29eRwsfWPkuumU8Aad0/YydVgYVD3pBY9ujB9zcTEK",
+        "age": 28,
+        "phone": 1234567891,
+        "verified": false
     }
 }
