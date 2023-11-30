@@ -34,5 +34,12 @@
         "name": "SamsUserName",
         "age": 28,
         "verified": false
+    },
+    "yesterday@tomorrw.com": {
+        "password": "$2b$10$5jGgrNIjbaJmg4vzzPuFpOBF36npH4FBjBKqRrYR36EApZ5Rm7ZFK",
+        "name": "SamsUserName",
+        "age": 28,
+        "phoneNumber": "123-456-7891",
+        "verified": false
     }
 }
