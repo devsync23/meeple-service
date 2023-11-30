@@ -3,7 +3,7 @@ export async function hashUserPass(req, res, next) {
     const saltRounds = 10;
     const myPlaintextPassword = req.body.password;
     const hashedPass = await bcrypt.hash(myPlaintextPassword, saltRounds)
-    req.body.password = hashUserPass
+    req.body.password = hashedPass
     next()
 }
 export function validateRegisterData(req, res, next) {
@@ -11,7 +11,7 @@ export function validateRegisterData(req, res, next) {
         || !req.body.password
         || !req.body.age
         || !req.body.name
-        || !req.body.phonebn
+        || !req.body.phone
     ) {
         return res.send('data is not valid')
     }

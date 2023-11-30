@@ -5,5 +5,22 @@
         "phone": 123456789,
         "age": "22",
         "verified": false
+    },
+    "aaa@123.com": {
+        "age": 22,
+        "phone": 11111111,
+        "verified": false
+    },
+    "ccc@123.com": {
+        "password": "$2b$10$e6yeLR3H.FhBvnUSdwCUGeJxaRbl0qaZ1XbACYc4e7N6sztxQvqm6",
+        "age": 22,
+        "phone": 11111111,
+        "verified": false
+    },
+    "ssss@123.com": {
+        "password": "$2b$10$pBHOvzMmfuH/yOoSllvNBOZIG/91qbrz1jXiSyRDJRQj5JS4SHuku",
+        "age": 22,
+        "phone": 11111111,
+        "verified": false
     }
 }
