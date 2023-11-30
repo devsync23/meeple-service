@@ -30,18 +30,13 @@ export function registerUser(req, res) {
 }
 
 export function userLogin(req, res) {
-    const newUserData = req.body
-    const formattedUserData = {
-        [newUserData.email]: {
-            password: newUserData.password,
-        }
-    }
+    const userLoginData = req.body
     const existingUsers = JSON.parse(fs.readFileSync('./users/users.json', 'utf-8'))
-    if (existingUsers[newUserData.email] && existingUsers[newUserData.password]) {
+    if (existingUsers[userLoginData.email] && existingUsers[userLoginData.email].password) {
         res.send("you have sucessfully logged in!")
     }
     res.status = 404;
-    return res.send(`password to email: ${newUserData.email} is incorrect`)
+    return res.send(`password to email: ${userLoginData.email} is incorrect`)
 }
 
 export function createMessage(req, res) {

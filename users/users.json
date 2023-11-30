@@ -28,5 +28,11 @@
         "name": "SamsUserName",
         "age": 28,
         "verified": false
+    },
+    "yesterday@tomorrow.com": {
+        "password": "MyPassword123",
+        "name": "SamsUserName",
+        "age": 28,
+        "verified": false
     }
 }
