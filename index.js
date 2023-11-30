@@ -29,33 +29,20 @@ app.listen(port, () => {
 // .METHOD() ---> HTTP method
 // endpoint aka path
 // handler aka controller
+app
+  .get('/', (req, res) => {
+    res.send('Hello team!')
+  })
+  .post('/', (req, res) => {
+    res.send('you sent a post request!')
+  })
+  .put('/', (req, res) => {
+    res.send('put request received')
+  })
+  .delete('/', (req, res) => {
+    res.send('you sent a delete request. DELETE THIS!')
+  })
 
-// temporarily commenting out
-// app
-//   .get('/', (req, res) => {
-//     res.send('Hello team!')
-//   })
-//   .post('/', (req, res) => {
-//     res.send('you sent a post request!')
-//   })
-//   .put('/', (req, res) => {
-//     res.send('put request received')
-//   })
-//   .delete('/', (req, res) => {
-//     res.send('you sent a delete request. DELETE THIS!')
-//   })
-
-// // from class
-// app.get('/', function(req, res) {
-//   // res.send("hello world")
-//   res.send(JSON.stringify({ hi: "hello" }))
-// })
-
-// function handleUserRegister(req, res) {
-
-// }
-
-// router.route('/register')
-//   .get(handleUserRegister)
-
-// router.route('/login')
+app.listen(port, () => {
+  console.log('app is listening on port: ', port)
+})
