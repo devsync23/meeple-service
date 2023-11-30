@@ -1,9 +1,8 @@
 {
     "ddd@123.com": {
-        "name": "JB",
-        "password": "12345",
-        "phone": 123456789,
-        "age": "22",
+        "password": "$2b$10$hSekJjJRH32AIAIiaN7Eb.2HbfXJDIUJFam7Oxq95S4cEPQlkO4tm",
+        "age": 22,
+        "phone": 11111111,
         "verified": false
     },
     "aaa@123.com": {
@@ -18,9 +17,16 @@
         "verified": false
     },
     "ssss@123.com": {
-        "password": "$2b$10$pBHOvzMmfuH/yOoSllvNBOZIG/91qbrz1jXiSyRDJRQj5JS4SHuku",
+        "password": "$2b$10$bimo669ZGF09KmFiTJGwE.h96nC1obaPFTO2t9ceR7bHllwmE3XFy",
         "age": 22,
         "phone": 11111111,
+        "verified": false
+    },
+    "ffff@123.com": {
+        "password": "$2b$10$8u7W1cig3bebuzGQpSCTv.lkD9bYol8do2Z.fOTNXLu/e/DrVLP3u",
+        "age": 22,
+        "phone": 11111111,
+        "name": "JB",
         "verified": false
     }
 }

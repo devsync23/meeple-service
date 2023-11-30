@@ -20,6 +20,8 @@ export function validateRegisterData(req, res, next) {
 }
 
 export function validateLoginData(req, res, next) {
-    console.log('hello from middleware 2')
+    if (!req.body.email || !req.body.password) {
+        return res.send('email and password are required to log in')
+    }
     next()
 }

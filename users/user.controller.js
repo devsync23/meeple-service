@@ -7,6 +7,7 @@ export function registerUser(req, res) {
             password: newUserData.password,
             age: newUserData.age,
             phone: newUserData.phone,
+            name: newUserData.name,
             verified: false
         }
     }
@@ -31,5 +32,5 @@ export function registerUser(req, res) {
 export function userLogin(req, res) {
     const  body  = req.body
     console.log(req.body)
-    res.send({})
+    res.send('you successfully logged in')
 }
