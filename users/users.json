@@ -5,5 +5,19 @@
         "age": 14,
         "phone": 123456788,
         "verified": false
+    },
+    "yesterday@riot.com": {
+        "name": "SamsUserName",
+        "password": "$2b$10$KPqybw5O/R0l4uMdru.5SeEysr40ap2l6bqenLco00Y3/uXXd9SDC",
+        "age": 28,
+        "phone": 1234567891,
+        "verified": false
+    },
+    "123@123.com": {
+        "name": "jason",
+        "password": "$2b$10$m4CVjEn7emf81SNjfWCiPuFS6iR6A5NESPkyEP9JuFRqTytxMqlFW",
+        "age": 28,
+        "phone": 1234567891,
+        "verified": false
     }
 }

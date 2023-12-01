@@ -1,4 +1,4 @@
-
+import fs from 'fs'
 import bcrypt from 'bcrypt'
 
 export async function hashUserPass(req, res, next) {
@@ -26,6 +26,16 @@ export function validateRegisterData(req, res, next) {
 }
 
 export function validateLoginData(req, res, next) {
-    console.log('hello from the middleware2')
+    if (!req.body.email
+        || !req.body.password
+        ) {
+        return res.send('email or password is not valid')
+    }
+    const existingUsers = JSON.parse(fs.readFileSync('./users/users.json', 'utf-8'))
+    if(!existingUsers[req.body.email]){
+        return res.send(`Could not login with email ${req.body.email}`)
+    }else {
+        req.userToLogin = existingUsers[req.body.email]
+    }
     next()
 }
