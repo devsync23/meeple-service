@@ -30,10 +30,17 @@
         "verified": false
     },
     "l23456@123.com": {
-        "password": "$2b$10$fa/9gsLKF5mVisgX7/XPJevzpKyKX2gp1KVfJzsfT226UDRk8p7Xq",
+        "password": "$2b$10$dblBT6/CU7wIXk4SY5onou9G4aX9CDChD7sI4I099/O4lkEQHP0/a",
         "age": 22,
-        "phone": 123456789,
-        "name": "123",
+        "phone": "123",
+        "name": "aa",
+        "verified": false
+    },
+    "234@123.com": {
+        "password": "$2b$10$51B/sU0lus8KYl9ySn8.wOt1gGRBQlAB.bEiojbY.oMAdzYCVfpcC",
+        "age": 22,
+        "phone": "123",
+        "name": "aa",
         "verified": false
     }
 }

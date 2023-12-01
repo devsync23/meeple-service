@@ -35,7 +35,8 @@ export async function userLogin(req, res) {
     const existingUser = req.user
     const doPasswordsMatch = await bcrypt.compare(password, existingUser.password)
     if (doPasswordsMatch) {
-        delete email.password
+        delete existingUser.password
+        console.log(existingUser)
         const signedJWT = jwt.sign(existingUser, 'shhhhhh')
         res.send(signedJWT)
     } else {

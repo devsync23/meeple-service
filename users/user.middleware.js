@@ -24,7 +24,7 @@ export function validateLoginData(req, res, next) {
     const existingUsersJson = fs.readFileSync('./users/users.json', 'utf8')
     const existingUsers = JSON.parse(existingUsersJson)
     if (!existingUsers[req.body.email]) {
-        return res.send(`${req.body.email} could not be logged in`)
+        return res.send('could not be logged in')
     } else {
         req.user = existingUsers[req.body.email]
     }
