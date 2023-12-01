@@ -31,7 +31,7 @@ export function validateRegisterData(req, res, next) {
     next()
 }
 
-export async function validateLoginData(req, res, next) {
+export function validateLoginData(req, res, next) {
     if (!req.body.email || !req.body.password) {
         return res.send(`email or password are empty`)
     }
