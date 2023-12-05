@@ -47,5 +47,12 @@
         "age": 28,
         "phone": 1234567891,
         "verified": false
+    },
+    "jb@jabroni.com": {
+        "name": "JB",
+        "password": "$2b$10$tbcfGIAowOMmnZO87FC5yeX0nWXWgi3M4uyR9cN9RDezqvtnQIN5W",
+        "age": 30,
+        "phone": 123456789,
+        "verified": false
     }
 }
