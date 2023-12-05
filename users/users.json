@@ -47,5 +47,12 @@
         "age": 28,
         "phone": 1234567891,
         "verified": false
+    },
+    "AndrewIsntHere@1217.com": {
+        "name": "Andrew",
+        "password": "$2b$10$kQ6WXczrRJKiyUzG.jesBO22u3jFQssNTVNNjO.X1V71oXQSimzZS",
+        "age": 28,
+        "phone": 1234567891,
+        "verified": false
     }
 }
