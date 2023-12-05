@@ -36,6 +36,6 @@ export async function userLogin(req, res) {
         return res.send(`login unsucessful`)
     }
     delete existingUser.password
-    const signedJWT = jwt.sign(existingUser, "shhhhhh")
+    const signedJWT = jwt.sign({...existingUser, email: loginData.email}, "shhhhhh")
     return res.send(signedJWT)
 }
