@@ -5,7 +5,7 @@ import { authenticateUserMessages, validateNewMessage } from "./message.middlewa
 const router = express.Router();
 
 router
-    .get("./my-messages", authenticateUserMessages, getMessages)
-    .post("./new-messages", authenticateUserMessages, validateNewMessage, createMessages);
+    .get("/my-messages", authenticateUserMessages, getMessages)
+    .post("/new-message", authenticateUserMessages, validateNewMessage, createMessages);
 
 export default router;

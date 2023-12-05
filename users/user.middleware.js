@@ -36,6 +36,9 @@ export function validateRegisterData(req, res, next) {
     if (!req.body.email) {
         return res.send("email is not valid")
     }
+    if (!req.body.email.includes("@") || !req.body.email.includes('.com')) {
+        return res.send('email is not a valid entry')
+    }
     if (!req.body.password) {
         return res.send("password is not valid")
     }

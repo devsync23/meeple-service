@@ -12,6 +12,7 @@ export function getMessages(req, res) {
 };
 
 export function createMessages(req, res) {
-    const newMessageData = req.body;
+    const { body, user } = req
+
     res.send("new message!")
 };
