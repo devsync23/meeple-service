@@ -13,7 +13,7 @@ import messageRouter from "./messages/message.routes.js"
 
 const app = express() // creates server
 // const router = express.Router()
-const port = process.env.PORT // gives server port number
+const port = 3000 // gives server port number
 // process.env.PORT points to .env file & looks at the PORT key
 
 
