@@ -53,9 +53,11 @@ export async function userLogin(req, res) {
     const doPasswordsMatch = await bcrypt.compare(password, existingUser.password)
     if (doPasswordsMatch) {
         // generate a JWT
-        const signedJWT = jwt.sign(existingUser, "shhhhhhh");
-        res.send({signedJWT}); // not the most secure as is - ideally don't include password to send to client(s)
+        delete existingUser.password;
+        const signedJWT = jwt.sign(existingUser, process.env.JWT_SECRET);
+        res.send(signedJWT); // not the most secure as is - ideally don't include password to send to client(s)
     } else
+    res.status = 400;
     res.send("could not log in");
 
 }

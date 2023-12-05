@@ -5,8 +5,8 @@ import { validateRegisterData, validateLoginData, hashUserPass } from "./user.mi
 const router = express.Router();
 
 router
-    .post('/register', validateRegisterData, hashUserPass, registerUser)
-    .post('/login', validateLoginData, userLogin);
+    .post("/register", validateRegisterData, hashUserPass, registerUser)
+    .post("/login", validateLoginData, userLogin);
 
 export default router;
 // export default - doesn't matter as much what you name it,

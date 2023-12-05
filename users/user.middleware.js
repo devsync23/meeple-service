@@ -52,7 +52,7 @@ export function validateRegisterData(req, res, next) {
 }
 
 export function validateLoginData(req, res, next) {
-    console.log('hello from middleware 2')
+    // console.log('hello from middleware 2')
     if (!req.body.email) {
         return res.send("email is not valid")
     }

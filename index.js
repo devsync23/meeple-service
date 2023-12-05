@@ -2,6 +2,7 @@ import express from "express"
 // import { registerUser } from "./users/user.controller.js"
 import bodyParser from "body-parser"
 import userRouter from "./users/user.routes.js"
+import messageRouter from "./messages/message.routes.js"
 
 
 // express library imported from node_modules
@@ -12,11 +13,13 @@ import userRouter from "./users/user.routes.js"
 
 const app = express() // creates server
 // const router = express.Router()
-const port = 3000 // gives server port number
+const port = process.env.PORT // gives server port number
+// process.env.PORT points to .env file & looks at the PORT key
 
 
 app.use(bodyParser.json())
-app.use('/users', userRouter)
+app.use("/users", userRouter)
+app.use("./messages", messageRouter)
 
 // .listen method turns server on
 app.listen(port, () => {
@@ -29,19 +32,21 @@ app.listen(port, () => {
 // .METHOD() ---> HTTP method
 // endpoint aka path
 // handler aka controller
-app
-  .get('/', (req, res) => {
-    res.send('Hello team!')
-  })
-  .post('/', (req, res) => {
-    res.send('you sent a post request!')
-  })
-  .put('/', (req, res) => {
-    res.send('put request received')
-  })
-  .delete('/', (req, res) => {
-    res.send('you sent a delete request. DELETE THIS!')
-  })
+
+// // for reference, examples of different requests
+// app
+//   .get('/', (req, res) => {
+//     res.send('Hello team!')
+//   })
+//   .post('/', (req, res) => {
+//     res.send('you sent a post request!')
+//   })
+//   .put('/', (req, res) => {
+//     res.send('put request received')
+//   })
+//   .delete('/', (req, res) => {
+//     res.send('you sent a delete request. DELETE THIS!')
+//   })
 
 app.listen(port, () => {
   console.log('app is listening on port: ', port)
