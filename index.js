@@ -2,6 +2,7 @@ import express from 'express'
 // import { registerUser } from "./users/user.controller.js"
 import bodyParser from 'body-parser'
 import userRouter from './users/user.routes.js'
+import messageRouter from './messages/message.routes.js'
 
 const app = express()
 const port = 3000
@@ -32,6 +33,7 @@ const port = 3000
 //   })
 app.use(bodyParser.json())
 app.use('/users', userRouter)
+app.use('/message', messageRouter)
 
 
 app.listen(port, () => {
