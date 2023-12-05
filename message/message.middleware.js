@@ -1,7 +1,12 @@
 import fs from "fs"
+import jwt from 'jwt'
 
-export function authenticateUserMessages(req, res, next) {
-
+export async function authenticateUserMessages(req, res, next) {
+    console.log(req);
+    const token = req.headers.authorization
+    const isVerified = await jwt.verify(token, "shhhhh")
+    console.log(isVerified)
+    next()
 }
 
 export function validateUserMessages(req, res, next) {
