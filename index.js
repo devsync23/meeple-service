@@ -19,7 +19,7 @@ const port = 3000 // gives server port number
 
 app.use(bodyParser.json())
 app.use("/users", userRouter)
-app.use("./messages", messageRouter)
+app.use("/messages", messageRouter)
 
 // .listen method turns server on
 app.listen(port, () => {
@@ -47,7 +47,3 @@ app.listen(port, () => {
 //   .delete('/', (req, res) => {
 //     res.send('you sent a delete request. DELETE THIS!')
 //   })
-
-app.listen(port, () => {
-  console.log('app is listening on port: ', port)
-})

@@ -54,5 +54,33 @@
         "age": 30,
         "phone": 123456789,
         "verified": false
+    },
+    "asdf": {
+        "name": "JB",
+        "password": "$2b$10$GQt6Vov.RFRYZKvrRI6DSeTlwDYu95Q8.2pKHD6fAB.l5vPCQvAEK",
+        "age": 30,
+        "phone": 123456789,
+        "verified": false
+    },
+    "fdsa": {
+        "name": "JB",
+        "password": "$2b$10$4qGAn7/lL5.2MGQo2TiAt.hUV/lkbJ2q4OQd99ayFQrbB43Hy5BEu",
+        "age": 30,
+        "phone": 123456789,
+        "verified": false
+    },
+    "fdsssssa": {
+        "name": "JB",
+        "password": "$2b$10$4XFpEP1P.S/YWmxO7U3RSORuDK1TiccwgVtogshjhJlYSL3Mq2tSK",
+        "age": 30,
+        "phone": 123456789,
+        "verified": false
+    },
+    "j@j.com": {
+        "name": "JB",
+        "password": "$2b$10$stRhH/BLBSxoCopbSSJytukT3d.xUA9BPc3pohiZRvVntBN8TKxfe",
+        "age": 30,
+        "phone": 123456789,
+        "verified": false
     }
 }
