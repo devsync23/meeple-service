@@ -1,6 +1,7 @@
 import fs from "fs"
 import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken"
+import { ReadableStreamBYOBRequest } from "stream/web";
 
 export function getMessages(req, res) {
     const myMessageData = req.body;
@@ -12,6 +13,9 @@ export function getMessages(req, res) {
 };
 
 export function createMessages(req, res) {
-    const newMessageData = req.body;
-    res.send("new message!")
+    const { body, user } = req;
+    const formattedMessage = {
+        // TODO
+    }
+    res.send("new message!");
 };
