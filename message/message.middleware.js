@@ -1,5 +1,5 @@
 import fs from "fs"
-import jwt from 'jwt'
+import jwt from 'jsonwebtoken'
 
 export async function authenticateUserMessages(req, res, next) {
     console.log(req);

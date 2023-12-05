@@ -6,7 +6,7 @@ export function getMessage(req, res) {
     if(Object.keys(existingMessage).length === 0){
         return res.send('Empty history')
     }
-    res.send('Here is the message log history' + '\n' + JSON.stringify(existingMessage, null, 4))
+    res.send('Here is the message log history' + '\n' + existingMessage)
 }
 
 export function createMessage(req, res) {
