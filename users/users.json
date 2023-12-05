@@ -47,5 +47,19 @@
         "age": 28,
         "phone": 1234567891,
         "verified": false
+    },
+    "234@123.com": {
+        "name": "aa",
+        "password": "$2b$10$vT4rDetRLYunVNb8x3MuS.zN.bBDrswVpCb6Jl5Bq6Yds1ItCdxcq",
+        "age": 22,
+        "phone": "123",
+        "verified": false
+    },
+    "bb@123.com": {
+        "name": "bb",
+        "password": "$2b$10$vEe9iRSFSLYvZTUfJt6ZJOd4y7Dab7z.BnYtlELWkcvwU36q66OY.",
+        "age": 22,
+        "phone": "123",
+        "verified": false
     }
 }

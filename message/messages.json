@@ -1,6 +1,30 @@
 {
-    "hi there. Good morning": {
-        "sourceLanguage": "English",
-        "targetLanguage": "Japanese"
-    }
+    "234@123.com": [
+        {
+            "user_id": "234@123.com",
+            "text": "hi",
+            "sourceLanguage": "english",
+            "targetLanguage": "mandarin",
+            "createdAt": 1701758160919
+        },
+        [
+            {
+                "user_id": "234@123.com",
+                "text": "hi",
+                "sourceLanguage": "english",
+                "targetLanguage": "mandarin",
+                "createdAt": 1701758765652
+            }
+        ],
+        [
+            {
+                "user_id": "234@123.com",
+                "text": "hi",
+                "sourceLanguage": "english",
+                "targetLanguage": "mandarin",
+                "translation": "你好",
+                "createdAt": 1701758911368
+            }
+        ]
+    ]
 }
