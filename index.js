@@ -1,6 +1,6 @@
 import express from 'express'
 import userRouter from './users/user.routes.js'
-import messageRouter from './message/message.routes.js'
+import messageRouter from './messages/message.routes.js'
 import bodyParser from 'body-parser'
 
 const app = express()

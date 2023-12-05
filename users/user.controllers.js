@@ -5,7 +5,7 @@ import jwt from "jsonwebtoken";
 
 export function registerUser(req, res) {
     const newUserData = req.body;
-    console.log(req.body)
+    // console.log(req.body)
     const formattedUserData = {
         [newUserData.email]: {
             name: newUserData.name,
