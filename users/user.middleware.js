@@ -39,7 +39,7 @@ export function validateRegisterData(req, res, next) {
     if (!req.body.password) {
         return res.send("password is not valid")
     }
-    if (!req.body.phoneNumber) {
+    if (!req.body.phone) {
         return res.send("phone number is not valid")
     }
     if (!req.body.age) {
@@ -56,13 +56,18 @@ export function validateLoginData(req, res, next) {
     if (!req.body.email) {
         return res.send("email is not valid")
     }
+    if (!req.body.email.includes("@") || !req.body.email.includes('.com')) {
+        return res.send('email is not a valid entry')
+    }
+    let existingUsers = JSON.parse(fs.readFileSync('./users/users.json', 'utf-8'))
+    if (!existingUsers[req.body.email]) {
+        return res.send(`Could not login with email ${req.body.email}`)
+    }
     if (!req.body.password) {
         return res.send("password is not valid")
     }
-    const existingUsers = JSON.parse(fs.readFileSync("./users/users.json"))
-    if (existingUsers[req.body.email]) {
-        return res.send(`Could not login with email ${req.body.email}`)
-    } else {
+
+    else {
         // remember: req & res are middleware objects, they all have access to these
         // adding user key to req {}
         req.user = existingUsers[req.body.email]
