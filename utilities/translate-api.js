@@ -1,6 +1,6 @@
 import OpenAI from "openai";
 const openai = new OpenAI({
-    apiKey: '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'
+    apiKey: ''
 })
 export async function translator(usermessage) {
     const chatCompletion = await openai.chat.completions.create({
