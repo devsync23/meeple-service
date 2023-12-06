@@ -2,29 +2,19 @@
     "234@123.com": [
         {
             "user_id": "234@123.com",
-            "text": "hi",
+            "text": "hi, what's your favorite song?",
             "sourceLanguage": "english",
             "targetLanguage": "mandarin",
-            "createdAt": 1701758160919
+            "translation": "你好，你最喜欢的歌曲是什么？ (Nǐ hǎo, nǐ zuì xǐhuān de gēqǔ shì shénme?)",
+            "createdAt": 1701834037101
         },
-        [
-            {
-                "user_id": "234@123.com",
-                "text": "hi",
-                "sourceLanguage": "english",
-                "targetLanguage": "mandarin",
-                "createdAt": 1701758765652
-            }
-        ],
-        [
-            {
-                "user_id": "234@123.com",
-                "text": "hi",
-                "sourceLanguage": "english",
-                "targetLanguage": "mandarin",
-                "translation": "你好",
-                "createdAt": 1701758911368
-            }
-        ]
+        {
+            "user_id": "234@123.com",
+            "text": "hi, what's your favorite song?",
+            "sourceLanguage": "english",
+            "targetLanguage": "mandarin",
+            "translation": "嗨，你最喜欢的歌曲是什么？ (Hāi, nǐ zuì xǐhuan de gēqǔ shì shénme?)",
+            "createdAt": 1701834126472
+        }
     ]
 }
