@@ -1,12 +1,225 @@
 {
-  "j@j.com": [
-    {
-      "sourceLanguage": "english",
-      "targetLanguage": "spanish",
-      "text": "hello",
-      "createdAt": 12343243243, 
-      "author_id": "j@j.com",
-      "translation": "hola"
-    }
-  ]
+    "test@test.com": [
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701749909665,
+            "text": "Today's weather is great",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish",
+            "translation": "El clima de hoy es genial."
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701749923921,
+            "text": "Today's weather is great",
+            "sourceLanguage": "English",
+            "targetLanguage": "Chinese",
+            "translation": "今天的天气很好。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701749932158,
+            "text": "Today's weather is great",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "translation": "今日嘅天氣好好"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701750263923,
+            "text": "Do you want to grab food",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "formality": "informal",
+            "translation": "你想唔想出去食嘢？"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834125511,
+            "text": "I want to grab some drinks from mickey D",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "formality": "informal",
+            "translation": "我想去薯條店攞啲嘢飲"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834150534,
+            "text": "I want to grab some drinks from mickey D",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "formality": "informal",
+            "translation": "我想去麥記攞啲嘢飲"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834160186,
+            "text": "I want to buy some drinks from mickey D",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "formality": "informal",
+            "translation": "我想喺麥記買啲飲品。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834559223,
+            "text": "I want to buy some drinks from mickey D",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "translation": "我想喺麥當勞買啲飲品"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834569485,
+            "text": "I want to buy some drinks from mickey D",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "formality": "informal",
+            "translation": "我想喺麥記買啲飲品。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834579062,
+            "text": "I want to buy some drinks from mickey D",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "formality": "more informal",
+            "translation": "我想喺麥記買啲嘢飲"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834586938,
+            "text": "I want to buy some drinks from mickey D",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "formality": "more informal",
+            "translation": "我想係麥記買啲飲品。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834605564,
+            "text": "I want to buy some drinks from mickey D",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "formality": "formal",
+            "translation": "我想喺麥當勞買啲飲品。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834624951,
+            "text": "I want to buy beverages from mcDonald's",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "formality": "formal",
+            "translation": "我想從麥當勞購買飲品。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834630125,
+            "text": "I want to buy beverages from mcDonald's",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "formality": "informal",
+            "translation": "我想麥當勞買飲品。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834637804,
+            "text": "I want to buy beverages at mcDonald's",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "formality": "informal",
+            "translation": "我想喺麥當勞買飲品。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834769326,
+            "text": "That is such a cute baby",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "formality": "informal",
+            "translation": "嗰個BB好得意呀。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834781744,
+            "text": "That is such a cute baby",
+            "sourceLanguage": "English",
+            "targetLanguage": "Mandarian",
+            "formality": "informal",
+            "translation": "那个宝宝真可爱。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834787270,
+            "text": "That is such a cute baby",
+            "sourceLanguage": "English",
+            "targetLanguage": "Mandarian",
+            "formality": "formal",
+            "translation": "那真是一个非常可爱的婴儿。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834815880,
+            "text": "That is such a cute baby",
+            "sourceLanguage": "English",
+            "targetLanguage": "Mandarian",
+            "formality": "beijing dialoge",
+            "translation": "那真是个可爱的宝宝。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834832993,
+            "text": "That is such a cute baby",
+            "sourceLanguage": "English",
+            "targetLanguage": "Mandarian",
+            "formality": "beijing dialect",
+            "translation": "那是个非常可爱的婴儿。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834842675,
+            "text": "That is such a cute baby",
+            "sourceLanguage": "English",
+            "targetLanguage": "Mandarian",
+            "formality": "informal",
+            "translation": "那个宝宝真可爱。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834848125,
+            "text": "That is such a cute baby",
+            "sourceLanguage": "English",
+            "targetLanguage": "japanese",
+            "formality": "informal",
+            "translation": "それ、めっちゃ可愛い赤ちゃんだね。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834896205,
+            "text": "No need for plastic bag",
+            "sourceLanguage": "English",
+            "targetLanguage": "japanese",
+            "formality": "informal",
+            "translation": "プラスチック袋は必要ないよ"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834933620,
+            "text": "No need for plastic bag",
+            "sourceLanguage": "English",
+            "targetLanguage": "japanese",
+            "formality": "formal",
+            "translation": "プラスチック袋は必要ありません"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701837149482,
+            "text": "Hello this is my demo",
+            "sourceLanguage": "English",
+            "targetLanguage": "japanese",
+            "formality": "informal",
+            "translation": "こんにちは、これが私のデモです"
+        }
+    ]
 }

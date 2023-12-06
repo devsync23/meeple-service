@@ -1,30 +1,29 @@
 import fs from "fs"
-import jwt from "jsonwebtoken"
+import jwt from 'jsonwebtoken'
 
-export function authenticateUserMessages(req, res, next) {
-    console.log(req);
+export async function authenticateUserMessages(req, res, next) {
     const token = req.headers.authorization
-    try {
-        const userData = jwt.verify(token, "shhhhh")
-        req.user = userData
-    } catch (err) {
-        return res.send(400, "Could not authenticate user")
+    const isVerified = await jwt.verify(token, "shhhhhh")
+    // when the jwt is verified and decrypted,
+    // it gives us the user data object
+    // then we append this object into the request object to pass on
+    req.user = isVerified
+    next()
+}
+
+export function validateUserMessages(req, res, next) {
+    let message = req.body;
+    if (!message.text){
+        res.send('Invalid message text')
+    }
+    if (!message.sourceLanguage){
+        res.send('Invalid message source language')
+    }
+    if (!message.targetLanguage){
+        res.send('Invalid message target language')
+    }
+    if (!message.formality){
+        res.send('Invalid message formality')
     }
     next()
-};
-
-export function validateNewMessage(req, res, next) {
-    // de-hash the user message & translate
-    // sourceLanguage, targetLanguage, text validation
-    console.log("from the validate new message", req.user);
-    if (!req.body.sourceLanguage) {
-        return res.send("source language input is not valid")
-    }
-    if (!req.body.targetLanguage) {
-        return res.send("target language input is not valid")
-    }
-    if (!req.body.text) {
-        return res.send("text input is not valid")
-    }
-    next();
-};
+}
