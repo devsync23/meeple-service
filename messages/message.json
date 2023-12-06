@@ -1,0 +1,12 @@
+{
+    "123@123.com": [
+      {
+        "sourceLanguage": "english",
+        "targetLanguage": "spanish",
+        "text": "hello",
+        "createdAt": 12343243243,
+        "author_id": "123@123.com",
+        "translation": "hola"
+      }
+    ]
+  }

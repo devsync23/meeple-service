@@ -26,21 +26,22 @@ export function getMessage(req, res){
 export async function createMessage(req, res){
     let existingMessage = JSON.parse(fs.readFileSync('./messages/message.json', 'utf8'))
     const { text, sourceLanguage, targetLanguage } = req.body;
-    const formattedMessage = {
-        [message.text]: {
-        sourceLanguage: message.sourceLanguage,
-        targetLanguage: message.targetLanguage
-        }
-    }
-    try {
-    const translatedText = await translateTextModule(text, sourceLanguage, targetLanguage)
 
-    const translationDetails = {
-        text,
-        translatedText,
-        sourceLanguage,
-        targetLanguage,
-      };
+    let prompt = `Translate ${message.text} from ${message.sourceLanguage} to ${message.targetLanguage}`
+    try {
+
+    const translatedText = await translateTextModule(prompt)
+    if (!existingMessage[req.user.email]){
+        existingMessage[req.user.email] = [];
+    }
+    const formattedMessage = {
+        author_id: req.user.email,
+        createdAt: Date.now(),
+        text: message.text,
+        sourceLanguage: message.sourceLanguage,
+        targetLanguage: message.targetLanguage,
+        translation: translatedText
+    }
 
     existingMessage = { ...existingMessage, ...formattedMessage}
     fs.writeFileSync('./message/message.json', JSON.stringify(translationDetails, null, 4))
@@ -49,15 +50,4 @@ export async function createMessage(req, res){
         console.error("Translate message error")
     }
 
-
-
-    // const { email, password } = req.body
-    // const existingUser = req.userToLogin
-    // if(doPasswordMatch) {
-    //     delete existingUser.password
-    //     const signedJWT = jwt.sign(existingUser, "shhhhh")
-    //     res.send(signedJWT)
-    // }else{
-
-    // }
 }
