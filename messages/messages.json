@@ -1,0 +1,186 @@
+{
+    "sam@sam.com": [
+        {
+            "author_id": "sam@sam.com",
+            "createdAt": "",
+            "text": "text3",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish"
+        },
+        {
+            "author_id": "sam@sam.com",
+            "createdAt": "",
+            "text": "text3",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish"
+        },
+        {
+            "author_id": "sam@sam.com",
+            "createdAt": "",
+            "text": "text3",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish"
+        }
+    ],
+    "andrew@andrew.com": [
+        {
+            "author_id": "andrew@andrew.com",
+            "createdAt": "",
+            "text": "text3",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish"
+        },
+        {
+            "author_id": "andrew@andrew.com",
+            "createdAt": "",
+            "text": "test4",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish"
+        },
+        {
+            "author_id": "andrew@andrew.com",
+            "createdAt": 1701748915305,
+            "text": "test4",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish"
+        },
+        {
+            "author_id": "andrew@andrew.com",
+            "createdAt": 1701753595767,
+            "text": "test4",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish",
+            "translation": {}
+        },
+        {
+            "author_id": "andrew@andrew.com",
+            "createdAt": 1701830378401,
+            "text": "test4",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish",
+            "translation": "Yes, I can translate test4 from English to Spanish. Please provide the text or sentence to be translated."
+        },
+        {
+            "author_id": "andrew@andrew.com",
+            "createdAt": 1701830454924,
+            "text": "hello",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish",
+            "translation": "The translation of \"hello\" from English to Spanish is \"hola\"."
+        },
+        {
+            "author_id": "andrew@andrew.com",
+            "createdAt": 1701830499302,
+            "text": "hello",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish",
+            "translation": "Yes, \"hello\" in Spanish is translated as \"hola.\""
+        },
+        {
+            "author_id": "andrew@andrew.com",
+            "createdAt": 1701830530654,
+            "text": "why is this translation so weird",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish",
+            "translation": "¿Por qué esta traducción es tan extraña?"
+        },
+        {
+            "author_id": "andrew@andrew.com",
+            "createdAt": 1701830628615,
+            "text": "why is this translation so weird",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish",
+            "translation": "¿Puedes traducir por qué esta traducción es tan extraña?"
+        },
+        {
+            "author_id": "andrew@andrew.com",
+            "createdAt": 1701830642980,
+            "text": "why is this translation so weird",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish",
+            "translation": "¿Puedes traducir por qué esta traducción es tan extraña?"
+        },
+        {
+            "author_id": "andrew@andrew.com",
+            "createdAt": 1701830658168,
+            "text": "why is this translation so weird",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish",
+            "translation": "¿Puedes traducir por qué esta traducción es tan extraña?"
+        },
+        {
+            "author_id": "andrew@andrew.com",
+            "createdAt": 1701830747273,
+            "text": "why is this translation so weird",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish",
+            "translation": "¿Por qué esta traducción es tan extraña?"
+        },
+        {
+            "author_id": "andrew@andrew.com",
+            "createdAt": 1701830773309,
+            "text": "why is this translation so weird",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish",
+            "translation": "¿Puedes traducir por qué esta traducción es tan extraña?"
+        },
+        {
+            "author_id": "andrew@andrew.com",
+            "createdAt": 1701830790789,
+            "text": "why is this translation so weird",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish",
+            "translation": "¿Por qué esta traducción es tan extraña?"
+        },
+        {
+            "author_id": "andrew@andrew.com",
+            "createdAt": 1701830894154,
+            "text": "why is this translation so weird",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish",
+            "translation": "¿Puedes traducir por qué esta traducción es tan extraña de inglés a español?"
+        },
+        {
+            "author_id": "andrew@andrew.com",
+            "createdAt": 1701830965585,
+            "text": "why is this translation so weird",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish",
+            "translation": "¿Por qué esta traducción es tan extraña?"
+        },
+        {
+            "author_id": "andrew@andrew.com",
+            "createdAt": 1701830979521,
+            "text": "new message",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish",
+            "translation": "Of course! Please provide the message you would like to have translated."
+        },
+        {
+            "author_id": "andrew@andrew.com",
+            "createdAt": 1701831034059,
+            "text": "new message",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish",
+            "translation": "Yes, I can help you with that. Please provide me with the message you would like to translate from English to Spanish."
+        }
+    ],
+    "kun@kun.com": [
+        {
+            "author_id": "kun@kun.com",
+            "createdAt": 1701831104128,
+            "text": "new message",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish",
+            "translation": "Of course! Please provide the message you would like to be translated from English to Spanish."
+        },
+        {
+            "author_id": "kun@kun.com",
+            "createdAt": 1701831173812,
+            "text": "new message",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish",
+            "translation": "The translation of \"new message\" from English to Spanish is \"nuevo mensaje\"."
+        }
+    ]
+}

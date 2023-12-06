@@ -54,5 +54,33 @@
         "age": 28,
         "phone": 1234567891,
         "verified": false
+    },
+    "AndrewIsntHere@1204.com": {
+        "name": "Andrew",
+        "password": "$2b$10$QUkXTPyOOn.54IGVuopApOaYNyRq4YJq8y0uQ0X9zVSOE5DKiBkN6",
+        "age": 28,
+        "phone": 1234567891,
+        "verified": false
+    },
+    "sam@sam.com": {
+        "name": "Sam",
+        "password": "$2b$10$0IvJ.xqPxYAZtBgt9F8u4.ugJaVJNQJYSHQTYJH8CRb.vY03JkayO",
+        "age": 28,
+        "phone": 1234567891,
+        "verified": false
+    },
+    "andrew@andrew.com": {
+        "name": "andrew",
+        "password": "$2b$10$6W1M0vCBdkeUF4UPvRM7C.n3dtLJTO78Q7gtdylnp5Qt27SOOv.g2",
+        "age": 28,
+        "phone": 1234567891,
+        "verified": false
+    },
+    "kun@kun.com": {
+        "name": "kun",
+        "password": "$2b$10$5GWrXWBS5uwuPQKoBVy7UemiEgbdvCia6tdE5v3hb5KfINc/J7dl2",
+        "age": 28,
+        "phone": 1234567891,
+        "verified": false
     }
 }
