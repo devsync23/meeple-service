@@ -19,7 +19,7 @@ export function getMessage(req, res){
             return res.send(`${newMessage} has already been here`)
     }
     existingMessage = {...existingMessage, ...formattedMessage }
-    fs.writeFileSync('./messages/messages.json', JSON.stringify(existingMessage, null, 4))
+    fs.writeFileSync('./messages/message.json', JSON.stringify(existingMessage, null, 4))
     res.send(`you had your message!`)
 }
 
@@ -45,7 +45,7 @@ export async function createMessage(req, res){
 
     // existingMessage = { ...existingMessage, ...formattedMessage}
     existingMessage[req.user.email].push(formattedMessage)
-    fs.writeFileSync('./message/message.json', JSON.stringify(existingMessage, null, 4))
+    fs.writeFileSync('./messages/message.json', JSON.stringify(existingMessage, null, 4))
     res.send(`message created`)
     } catch (error) {
         console.error("Translate message error")
