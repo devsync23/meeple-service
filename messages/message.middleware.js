@@ -2,10 +2,10 @@
 import jwt from 'jsonwebtoken'
 
 export function authenticateUserMessages(req, res, next) {
-    const token = req.headers.authorization.split(' ')[1]
+    const token = req.headers.authorization
     console.log(token)
 try{
-    const authenticateUser = jwt.verify(token, "ahhhhh")
+    const authenticateUser = jwt.verify(token, "shhhhh")
     req.user = authenticateUser
     if(authenticateUser){
         next()

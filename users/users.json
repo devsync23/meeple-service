@@ -19,5 +19,12 @@
         "age": 28,
         "phone": 1234567891,
         "verified": false
+    },
+    "kun@kun.com": {
+        "name": "kun",
+        "password": "$2b$10$.JNgkDBoDxTwPuj68U7TFONU.QzTpk72YkQUQ2mKI12Nk8CWcDH0m",
+        "age": "27",
+        "phone": 12345678,
+        "verified": false
     }
 }

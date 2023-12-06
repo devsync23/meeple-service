@@ -6,7 +6,7 @@ import { hashUserPass, validateRegisterData, validateLoginData } from "./user.mi
 
 const router = express.Router()
 
-router.post('/register', validateRegisterData, hashUserPass, validateLoginData, registerUser)
+router.post('/register', validateRegisterData, hashUserPass, registerUser)
 router.post('/login', validateLoginData, loginUser)
 
 export default router
