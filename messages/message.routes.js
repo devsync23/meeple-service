@@ -10,11 +10,10 @@ import {
     validateUserMessages
 } from './message.middleware.js'
 
-
 const router = express.Router()
 
 router
-    .get('/checkMessages', authenticateUserMessages, createMessage)
+    .get('/check-message', authenticateUserMessages, getMessage)
     .post('/new-message', authenticateUserMessages, validateUserMessages, createMessage)
 
 export default router

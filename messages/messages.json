@@ -22,7 +22,7 @@
             "text": "Today's weather is great",
             "sourceLanguage": "English",
             "targetLanguage": "Cantonese",
-            "translation": "今日嘅天氣好好\n"
+            "translation": "今日嘅天氣好好"
         },
         {
             "author_id": "test@test.com",
@@ -35,30 +35,101 @@
         },
         {
             "author_id": "test@test.com",
-            "createdAt": 1701750277416,
-            "text": "Do you want to grab food",
-            "sourceLanguage": "English",
-            "targetLanguage": "Cantonese",
-            "formality": "formal",
-            "translation": "你想唔想去攞食物？"
-        },
-        {
-            "author_id": "test@test.com",
-            "createdAt": 1701750286225,
-            "text": "Do you want to get food",
-            "sourceLanguage": "English",
-            "targetLanguage": "Cantonese",
-            "formality": "formal",
-            "translation": "你想唔想去買食物呢？"
-        },
-        {
-            "author_id": "test@test.com",
-            "createdAt": 1701750297167,
-            "text": "Do you want to get food",
+            "createdAt": 1701834125511,
+            "text": "I want to grab some drinks from mickey D",
             "sourceLanguage": "English",
             "targetLanguage": "Cantonese",
             "formality": "informal",
-            "translation": "你想唔想去食嘢呀?"
+            "translation": "我想去薯條店攞啲嘢飲"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834150534,
+            "text": "I want to grab some drinks from mickey D",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "formality": "informal",
+            "translation": "我想去麥記攞啲嘢飲"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834160186,
+            "text": "I want to buy some drinks from mickey D",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "formality": "informal",
+            "translation": "我想喺麥記買啲飲品。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834559223,
+            "text": "I want to buy some drinks from mickey D",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "translation": "我想喺麥當勞買啲飲品"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834569485,
+            "text": "I want to buy some drinks from mickey D",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "formality": "informal",
+            "translation": "我想喺麥記買啲飲品。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834579062,
+            "text": "I want to buy some drinks from mickey D",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "formality": "more informal",
+            "translation": "我想喺麥記買啲嘢飲"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834586938,
+            "text": "I want to buy some drinks from mickey D",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "formality": "more informal",
+            "translation": "我想係麥記買啲飲品。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834605564,
+            "text": "I want to buy some drinks from mickey D",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "formality": "formal",
+            "translation": "我想喺麥當勞買啲飲品。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834624951,
+            "text": "I want to buy beverages from mcDonald's",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "formality": "formal",
+            "translation": "我想從麥當勞購買飲品。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834630125,
+            "text": "I want to buy beverages from mcDonald's",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "formality": "informal",
+            "translation": "我想麥當勞買飲品。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834637804,
+            "text": "I want to buy beverages at mcDonald's",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "formality": "informal",
+            "translation": "我想喺麥當勞買飲品。"
         }
     ]
 }
