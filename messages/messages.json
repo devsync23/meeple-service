@@ -130,6 +130,96 @@
             "targetLanguage": "Cantonese",
             "formality": "informal",
             "translation": "我想喺麥當勞買飲品。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834769326,
+            "text": "That is such a cute baby",
+            "sourceLanguage": "English",
+            "targetLanguage": "Cantonese",
+            "formality": "informal",
+            "translation": "嗰個BB好得意呀。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834781744,
+            "text": "That is such a cute baby",
+            "sourceLanguage": "English",
+            "targetLanguage": "Mandarian",
+            "formality": "informal",
+            "translation": "那个宝宝真可爱。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834787270,
+            "text": "That is such a cute baby",
+            "sourceLanguage": "English",
+            "targetLanguage": "Mandarian",
+            "formality": "formal",
+            "translation": "那真是一个非常可爱的婴儿。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834815880,
+            "text": "That is such a cute baby",
+            "sourceLanguage": "English",
+            "targetLanguage": "Mandarian",
+            "formality": "beijing dialoge",
+            "translation": "那真是个可爱的宝宝。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834832993,
+            "text": "That is such a cute baby",
+            "sourceLanguage": "English",
+            "targetLanguage": "Mandarian",
+            "formality": "beijing dialect",
+            "translation": "那是个非常可爱的婴儿。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834842675,
+            "text": "That is such a cute baby",
+            "sourceLanguage": "English",
+            "targetLanguage": "Mandarian",
+            "formality": "informal",
+            "translation": "那个宝宝真可爱。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834848125,
+            "text": "That is such a cute baby",
+            "sourceLanguage": "English",
+            "targetLanguage": "japanese",
+            "formality": "informal",
+            "translation": "それ、めっちゃ可愛い赤ちゃんだね。"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834896205,
+            "text": "No need for plastic bag",
+            "sourceLanguage": "English",
+            "targetLanguage": "japanese",
+            "formality": "informal",
+            "translation": "プラスチック袋は必要ないよ"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701834933620,
+            "text": "No need for plastic bag",
+            "sourceLanguage": "English",
+            "targetLanguage": "japanese",
+            "formality": "formal",
+            "translation": "プラスチック袋は必要ありません"
+        },
+        {
+            "author_id": "test@test.com",
+            "createdAt": 1701837149482,
+            "text": "Hello this is my demo",
+            "sourceLanguage": "English",
+            "targetLanguage": "japanese",
+            "formality": "informal",
+            "translation": "こんにちは、これが私のデモです"
         }
     ]
 }
