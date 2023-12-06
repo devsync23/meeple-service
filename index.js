@@ -1,28 +1,10 @@
-<<<<<<< HEAD
 import express from 'express'
 import userRouter from './users/user.routes.js'
 import messageRouter from './messages/message.routes.js'
 import bodyParser from 'body-parser'
-=======
-import express from "express"
-// import { registerUser } from "./users/user.controller.js"
-import bodyParser from "body-parser"
-import userRouter from "./users/user.routes.js"
-import messageRouter from "./messages/message.routes.js"
 
-
-// express library imported from node_modules
-// app is a running express app
-// app is an object, once express() is invoked, creates an instance of / creates an object of some specific type or interface
-// type of object is type express - though we don't currently have types in this project
-
-
-const app = express() // creates server
-// const router = express.Router()
-const port = 3000 // gives server port number
-// process.env.PORT points to .env file & looks at the PORT key
->>>>>>> origin
-
+const app = express()
+const port = 3000
 
 app.use(bodyParser.json())
 app.use("/users", userRouter)
