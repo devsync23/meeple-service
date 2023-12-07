@@ -1,12 +1,12 @@
 {
-  "j@j.com": [
-    {
-      "sourceLanguage": "english",
-      "targetLanguage": "spanish",
-      "text": "hello",
-      "createdAt": 12343243243, 
-      "author_id": "j@j.com",
-      "translation": "hola"
-    }
-  ]
+    "test@gmail.com": [
+        {
+            "sourceLanguage": "english",
+            "targetLanguage": "spanish",
+            "text": "can i go to the bathroom?",
+            "createdAt": 1701837539175,
+            "author_id": "test@gmail.com",
+            "translation": "¿Puedo ir al baño?"
+        }
+    ]
 }

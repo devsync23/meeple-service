@@ -82,5 +82,12 @@
         "age": 30,
         "phone": 123456789,
         "verified": false
+    },
+    "test@gmail.com": {
+        "name": "test user",
+        "password": "$2b$10$n5kIMbb1twe4ci9FpvgwMO77YUg6fjr1xC4eQD82QzMlLINiEleGS",
+        "age": 28,
+        "phone": 1234567890,
+        "verified": false
     }
 }
