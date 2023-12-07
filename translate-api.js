@@ -1,6 +1,7 @@
 import OpenAI from "openai"
+
 const openai = new OpenAI({
-    apiKey: "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"
+    apiKey: process.env.GPT_KEY
 })
 
 export async function translateText(input) {

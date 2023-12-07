@@ -4,7 +4,7 @@ import { translateText } from "../translate-api.js"
 
 export async function authenticateUserMessages(req, res, next) {
     const token = req.headers.authorization
-    const isVerified = await jwt.verify(token, "shhhhhh")
+    const isVerified = await jwt.verify(token, process.env.JWT_SECRET)
     req.user = isVerified;
     next()
 }
