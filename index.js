@@ -1,8 +1,8 @@
+import 'dotenv/config'
 import express from 'express'
 import userRouter from './users/user.routes.js'
 import messageRouter from './messages/message.routes.js'
 import bodyParser from 'body-parser'
-import 'dotenv/config'
 
 const app = express()
 const port = 3000

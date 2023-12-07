@@ -5,7 +5,7 @@ export function authenticateUserMessages(req, res, next) {
     console.log(req);
     const token = req.headers.authorization
     try {
-        const userData = jwt.verify(token, "shhhhhh")
+        const userData = jwt.verify(token, process.env.JWT_SECRET)
         req.user = userData
         console.log("userData>>>>>>>>>>:", userData)
     } catch (err) {

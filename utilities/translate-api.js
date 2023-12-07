@@ -1,7 +1,9 @@
 import OpenAI from "openai";
+
 const openai = new OpenAI({
-    apiKey: ''
+    apiKey: process.env.GPT_KEY
 })
+
 export async function translator(usermessage) {
     const chatCompletion = await openai.chat.completions.create({
         messages: [{ role: 'user', content: usermessage }],
