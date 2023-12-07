@@ -2,6 +2,7 @@ import express from 'express'
 import userRouter from './users/user.routes.js'
 import messageRouter from './messages/message.routes.js'
 import bodyParser from 'body-parser'
+import 'dotenv/config'
 
 const app = express()
 const port = 3000
@@ -13,6 +14,7 @@ app.use("/messages", messageRouter)
 // .listen method turns server on
 app.listen(port, () => {
   console.log('app is listening on port: ', port)
+  console.log(process.env)
 })
 
 
