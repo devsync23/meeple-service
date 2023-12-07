@@ -56,6 +56,6 @@ export async function userLogin(req, res) {
     } else
     // generate a JWT
     delete existingUser.password;
-    const signedJWT = jwt.sign({...existingUser, email }, "shhhhh");
+    const signedJWT = jwt.sign({...existingUser, email }, process.env.JWT_SECRET);
     res.send(signedJWT); // not the most secure as is - ideally don't include password to send to client(s)
 }

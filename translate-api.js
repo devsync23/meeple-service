@@ -3,7 +3,7 @@ import OpenAI from "openai";
 // const { Configuration, OpenAIApi } = require("openai");
 
 const openai = new OpenAI({
-    apiKey: "",
+    apiKey: process.env.GPT_KEY,
 });
 
 export async function translateText(textString) {

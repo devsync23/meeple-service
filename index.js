@@ -1,8 +1,10 @@
+import "dotenv/config.js" // needs to be above the user & message router imports to work
 import express from "express"
 // import { registerUser } from "./users/user.controller.js"
 import bodyParser from "body-parser"
 import userRouter from "./users/user.routes.js"
 import messageRouter from "./messages/message.routes.js"
+
 
 
 // express library imported from node_modules
@@ -17,14 +19,15 @@ const port = 3000 // gives server port number
 // process.env.PORT points to .env file & looks at the PORT key
 
 
-app.use(bodyParser.json())
-app.use("/users", userRouter)
-app.use("/messages", messageRouter)
+app.use(bodyParser.json());
+app.use("/users", userRouter);
+app.use("/messages", messageRouter);
 
 // .listen method turns server on
 app.listen(port, () => {
-  console.log('app is listening on port: ', port)
-})
+  console.log("app is listening on port: ", port);
+  console.log(process.env);
+});
 
 
 // express ROUTE
