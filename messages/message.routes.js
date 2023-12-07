@@ -14,7 +14,7 @@ import {
 const router = express.Router()
 
 router
-    .get('/checkMessages', authenticateUserMessages, getMessage)
-    .post('/postMessages', authenticateUserMessages, validateUserMessages, createMessage)
+    .get('/my-messages', authenticateUserMessages, getMessage)
+    .post('/new-message', authenticateUserMessages, validateUserMessages, createMessage)
 
 export default router
