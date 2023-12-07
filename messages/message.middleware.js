@@ -1,30 +1,26 @@
 import fs from "fs"
-import jwt from "jsonwebtoken"
+import jwt from 'jsonwebtoken'
 
-export function authenticateUserMessages(req, res, next) {
-    console.log(req);
+export async function authenticateUserMessages(req, res, next) {
     const token = req.headers.authorization
     try {
         const userData = jwt.verify(token, process.env.JWT_SECRET)
         req.user = userData
+        console.log("userData>>>>>>>>>>:", userData)
     } catch (err) {
-        return res.send(400, "Could not authenticate user")
+        return res.send(400, "oops, something's wrong, could not authenticate user")
     }
     next()
-};
+}
 
-export function validateNewMessage(req, res, next) {
-    // de-hash the user message & translate
-    // sourceLanguage, targetLanguage, text validation
-    console.log("from the validate new message", req.user);
-    if (!req.body.sourceLanguage) {
-        return res.send("source language input is not valid")
+export function validateUserMessages(req, res, next) {
+    if (!req.body.sourceLanguage
+        || !req.body.targetLanguage
+        || !req.body.text
+        ) {
+        res.send(400, 'data not valid')
     }
-    if (!req.body.targetLanguage) {
-        return res.send("target language input is not valid")
-    }
-    if (!req.body.text) {
-        return res.send("text input is not valid")
-    }
-    next();
-};
+    // req.user = user_email
+    // console.log(user_email)
+    next()
+}

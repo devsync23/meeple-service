@@ -1,20 +1,21 @@
 import fs from "fs"
 import { translateText } from "../translate-api.js"
 
-export function getMessages(req, res) {
-    const myMessageData = req.body;
-    const formattedMyMessageData = {
-        // idk????
+export function getMessage(req, res) {
+    let existingMessage = JSON.parse(fs.readFileSync('./messages/messages.json'), 'utf8')
+    console.log(existingMessage)
+    if(Object.keys(existingMessage).length === 0){
+        return res.send('Empty history')
     }
-    res.send("get messages!")
-};
+    res.send('Here is the message log history' + '\n' + JSON.stringify(existingMessage, null, 4))
+}
 
 export async function createMessages(req, res) {
-
+    let existingMessage = JSON.parse(fs.readFileSync('./messages/messages.json', 'utf8'))
     const { body, user } = req;
     const translatedText = await translateText(`please translate ${body.text} from ${body.sourceLanguage} to ${body.targetLanguage}`)
     console.log(translatedText);
-    const formattedMessageData = {
+    const formattedMessage = {
         [user.email]: [
             {
                 sourceLanguage: req.body.sourceLanguage,
@@ -28,20 +29,11 @@ export async function createMessages(req, res) {
     }
     const existingMessagesJson = fs.readFileSync('./messages/messages.json', 'utf8');
     const existingMessages = JSON.parse(existingMessagesJson);
-    if (existingMessages[user.email]) {
-        existingMessages[user.email]
-        const updatedMessagesData = {
-
-        }
+    if (email in existingMessage) {
+        existingMessage[email].push(formattedMessage[email][0])
     } else {
-        const updatedMessagesData = {
-            ...existingMessagesJson,
-            ...formattedMessageData
-        }
+        existingMessage[email] = formattedMessage[email]
     }
-
-
-
-    fs.writeFileSync("./messages/messages.json", JSON.stringify(updatedMessagesData, null, 4))
-    res.send(translatedText);
+    fs.writeFileSync('./messages/messages.json', JSON.stringify(existingMessage, null, 4))
+    res.send(translatedText)
 };

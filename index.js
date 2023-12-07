@@ -13,11 +13,8 @@ import messageRouter from "./messages/message.routes.js"
 // type of object is type express - though we don't currently have types in this project
 
 
-const app = express() // creates server
-// const router = express.Router()
-const port = 3000 // gives server port number
-// process.env.PORT points to .env file & looks at the PORT key
-
+const app = express()
+const port = 3000
 
 app.use(bodyParser.json());
 app.use("/users", userRouter);

@@ -1,7 +1,6 @@
 import fs from "fs"
 import bcrypt from 'bcrypt'
-import jwt from "jsonwebtoken"
-
+import jwt from "jsonwebtoken";
 
 
 export function registerUser(req, res) {
@@ -34,10 +33,9 @@ export async function userLogin(req, res) {
     const passwordCheck = await bcrypt.compare(loginData.password, existingUser.password)
     if (!passwordCheck) {
         res.status = 400;
-        return res.send("login unsucessful")
-    } else
-    // generate a JWT
-    delete existingUser.password;
-    const signedJWT = jwt.sign({...existingUser, email: loginData.email}, process.env.JWT_SECRET)
-    return res.send(signedJWT); // not the most secure as is - ideally don't include password to send to client(s)
+        return res.send(`login unsucessful`)
+    }
+    delete existingUser.password
+    const signedJWT = jwt.sign({ ...existingUser, email: loginData.email }, "shhhhhh")
+    return res.send(signedJWT)
 }
