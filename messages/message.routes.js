@@ -7,15 +7,14 @@ import {
 
 import {
     authenticateUserMessages,
-    validateUserMessages,
-    appendTranslatedText
+    validateUserMessages
 } from './message.middleware.js'
 
 
 const router = express.Router()
 
 router
-    .get('/checkMessages', authenticateUserMessages, getMessage)
-    .post('/postMessages', authenticateUserMessages, validateUserMessages, appendTranslatedText, createMessage)
+    .get('/my-messages', authenticateUserMessages, getMessage)
+    .post('/new-message', authenticateUserMessages, validateUserMessages, createMessage)
 
 export default router

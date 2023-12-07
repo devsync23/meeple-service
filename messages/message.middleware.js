@@ -1,30 +1,26 @@
 import fs from "fs"
 import jwt from 'jsonwebtoken'
-import { translateText } from "../translate-api.js"
 
 export async function authenticateUserMessages(req, res, next) {
     const token = req.headers.authorization
-    const isVerified = await jwt.verify(token, "shhhhhh")
-    req.user = isVerified;
+    try {
+        const userData = jwt.verify(token, process.env.JWT_SECRET)
+        req.user = userData
+        console.log("userData>>>>>>>>>>:", userData)
+    } catch (err) {
+        return res.send(400, "oops, something's wrong, could not authenticate user")
+    }
     next()
 }
 
 export function validateUserMessages(req, res, next) {
-    const existingUsers = JSON.parse(fs.readFileSync('./users/users.json', 'utf8'))
-    const newMessage = req.body
-    if (!newMessage.text || !newMessage.sourceLanguage || !newMessage.targetLanguage) {
-        return res.send("please fill in all fields")
+    if (!req.body.sourceLanguage
+        || !req.body.targetLanguage
+        || !req.body.text
+        ) {
+        res.send(400, 'data not valid')
     }
-    if (!existingUsers[newMessage.author_id]) {
-        return res.send("user does not exist")
-    }
-    req.body.createdAt = Date.now()
-    next()
-}
-
-export function appendTranslatedText(req, res, next) {
-    const newMessage = req.body
-    req.body.translation = translateText(newMessage)
-    console.log(req.body)
+    // req.user = user_email
+    // console.log(user_email)
     next()
 }

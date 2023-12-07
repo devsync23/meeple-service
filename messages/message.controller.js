@@ -1,42 +1,37 @@
 import fs from "fs"
-import { recentTranslations } from "./helperFunctions.js"
+import { translator } from "../utilities/translate-api.js"
 
 export function getMessage(req, res) {
-    let existingMessages = JSON.parse(fs.readFileSync('./messages/messages.json'), 'utf8')
-    if (Object.keys(existingMessages).length === 0) {
+    let existingMessage = JSON.parse(fs.readFileSync('./messages/messages.json'), 'utf8')
+    console.log(existingMessage)
+    if(Object.keys(existingMessage).length === 0){
         return res.send('Empty history')
     }
-    return res.send(recentTranslations(existingMessages, req.user.email), null, 4)
-    //'Here is the message log history' + '\n' + JSON.stringify(existingMessage, null, 4))
+    res.send('Here is the message log history' + '\n' + JSON.stringify(existingMessage, null, 4))
 }
 
-export function createMessage(req, res) {
-    let existingMessages = JSON.parse(fs.readFileSync('./messages/messages.json', 'utf8'))
+export async function createMessage(req, res) {
+    let existingMessage = JSON.parse(fs.readFileSync('./messages/messages.json', 'utf8'))
+    console.log(existingMessage)
     const message = req.body;
-    if (existingMessages[message.author_id]) {
-        const updateMessageArray = {
-            author_id: message.author_id,
-            createdAt: message.createdAt,
+    const { email } = req.user;
+    const translatedText = await translator(`Please translate ${message.text} from ${message.sourceLanguage} to ${message.targetLanguage}`)
+    const formattedMessage = {
+        [email]: [{
+            user_id: email,
             text: message.text,
             sourceLanguage: message.sourceLanguage,
             targetLanguage: message.targetLanguage,
-            translation: message.translation
-        }
-        const updatedMessage = existingMessages[message.author_id].push(updateMessageArray)
-        existingMessages = { ...existingMessages, ...updatedMessage }
-    } else {
-        const formattedMessage = {
-            [message.author_id]: [{
-                author_id: message.author_id,
-                createdAt: message.createdAt,
-                text: message.text,
-                sourceLanguage: message.sourceLanguage,
-                targetLanguage: message.targetLanguage,
-                translation: message.translation
-            }]
-        }
-        existingMessages = { ...existingMessages, ...formattedMessage }
+            translation: translatedText,
+            createdAt: Date.now()
+        }]
     }
-    fs.writeFileSync('./messages/messages.json', JSON.stringify(existingMessages, null, 4))
-    return res.send(`We have received your message! \nTranslating "${message.text}" from ${message.sourceLanguage} to ${message.targetLanguage}: \n"${message.translation}"`)
+    if (email in existingMessage) {
+        existingMessage[email].push(formattedMessage[email][0])
+    } else {
+        existingMessage[email] = formattedMessage[email]
+    }
+    fs.writeFileSync('./messages/messages.json', JSON.stringify(existingMessage, null, 4))
+
+    res.send(translatedText)
 }
