@@ -48,6 +48,7 @@
         "phone": 1234567891,
         "verified": false
     },
+<<<<<<< HEAD
     "AndrewIsntHere@1217.com": {
         "name": "Andrew",
         "password": "$2b$10$kQ6WXczrRJKiyUzG.jesBO22u3jFQssNTVNNjO.X1V71oXQSimzZS",
@@ -81,6 +82,41 @@
         "password": "$2b$10$5GWrXWBS5uwuPQKoBVy7UemiEgbdvCia6tdE5v3hb5KfINc/J7dl2",
         "age": 28,
         "phone": 1234567891,
+=======
+    "jb@jabroni.com": {
+        "name": "JB",
+        "password": "$2b$10$tbcfGIAowOMmnZO87FC5yeX0nWXWgi3M4uyR9cN9RDezqvtnQIN5W",
+        "age": 30,
+        "phone": 123456789,
+        "verified": false
+    },
+    "asdf": {
+        "name": "JB",
+        "password": "$2b$10$GQt6Vov.RFRYZKvrRI6DSeTlwDYu95Q8.2pKHD6fAB.l5vPCQvAEK",
+        "age": 30,
+        "phone": 123456789,
+        "verified": false
+    },
+    "fdsa": {
+        "name": "JB",
+        "password": "$2b$10$4qGAn7/lL5.2MGQo2TiAt.hUV/lkbJ2q4OQd99ayFQrbB43Hy5BEu",
+        "age": 30,
+        "phone": 123456789,
+        "verified": false
+    },
+    "fdsssssa": {
+        "name": "JB",
+        "password": "$2b$10$4XFpEP1P.S/YWmxO7U3RSORuDK1TiccwgVtogshjhJlYSL3Mq2tSK",
+        "age": 30,
+        "phone": 123456789,
+        "verified": false
+    },
+    "j@j.com": {
+        "name": "JB",
+        "password": "$2b$10$stRhH/BLBSxoCopbSSJytukT3d.xUA9BPc3pohiZRvVntBN8TKxfe",
+        "age": 30,
+        "phone": 123456789,
+>>>>>>> 1c29e4f2a798be21aacacb490f1d146d7eedc688
         "verified": false
     }
 }
