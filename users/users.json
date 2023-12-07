@@ -61,5 +61,12 @@
         "age": 22,
         "phone": "123",
         "verified": false
+    },
+    "j@j.com": {
+        "name": "JB",
+        "password": "$2b$10$dULHvgTkmo8gV3eahuze6ecj5yLEuiNVi19udtWpG/8MpDY5UiTLG",
+        "age": 30,
+        "phone": 123456789,
+        "verified": false
     }
 }
