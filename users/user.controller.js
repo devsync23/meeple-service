@@ -7,13 +7,11 @@ import jwt from "jsonwebtoken"
 export function registerUser(req, res) {
     const newUserData = req.body;
     const formattedUserData = {
-        [newUserData.email]: {
-            name: newUserData.name,
-            password: newUserData.password,
-            age: newUserData.age,
-            phone: newUserData.phone,
-            verified: false
-        }
+        name: newUserData.name,
+        password: newUserData.password,
+        age: newUserData.age,
+        phone: newUserData.phone,
+        verified: false
     }
 
     let existingUserData = JSON.parse(fs.readFileSync('./users/users.json', 'utf8'))
