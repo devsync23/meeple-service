@@ -37,6 +37,13 @@
             "sourceLanguage": "English",
             "targetLanguage": "French",
             "translation": "Bonjour!"
+        },
+        {
+            "createdAt": 1701916391859,
+            "text": "Hello!",
+            "sourceLanguage": "English",
+            "targetLanguage": "French",
+            "translation": "Bonjour!"
         }
     ]
 }
