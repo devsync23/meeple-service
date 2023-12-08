@@ -6,7 +6,6 @@ import jwt from "jsonwebtoken"
 
 export function registerUser(req, res) {
     const newUserData = req.body;
-    console.log(req.body)
     const formattedUserData = {
         [newUserData.email]: {
             name: newUserData.name,
@@ -18,14 +17,16 @@ export function registerUser(req, res) {
     }
 
     let existingUserData = JSON.parse(fs.readFileSync('./users/users.json', 'utf8'))
+    
+    // if a user with that email already exists, throw error
     if (existingUserData[newUserData.email]) {
         res.status = 404;
         return res.send(`${newUserData.email} has already been registered`)
     }
-    // if the above condition is trigger, the following codes wont be triggered
-    existingUserData = { ...existingUserData, ...formattedUserData }
+
+    existingUserData[newUserData.email] = formattedUserData
     fs.writeFileSync('./users/users.json', JSON.stringify(existingUserData, null, 4))
-    res.send(`you registered your user profile! ${newUserData.name}`)
+    res.send(newUserData)
 }
 
 export async function userLogin(req, res) {
