@@ -1,7 +1,7 @@
 import OpenAI from 'openai';
 
 const openai = new OpenAI({
-    apiKey: ''
+    apiKey: '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'
 });
 
 export async function translation(content){
