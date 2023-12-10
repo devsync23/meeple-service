@@ -3,7 +3,6 @@ import bcrypt from 'bcrypt'
 import jwt from "jsonwebtoken"
 
 
-
 export function registerUser(req, res) {
     const newUserData = req.body;
     const formattedUserData = {
@@ -37,5 +36,5 @@ export async function userLogin(req, res) {
     }
     delete existingUser.password
     const signedJWT = jwt.sign({...existingUser, email: loginData.email}, process.env.JWT_SECRET)
-    return res.send(signedJWT)
+    return res.send({ jwt: signedJWT })
 }
