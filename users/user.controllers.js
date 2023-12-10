@@ -1,30 +1,30 @@
 import fs from "fs"
 import bcrypt from 'bcrypt'
-import jwt from "jsonwebtoken"
-
+import jwt from "jsonwebtoken";
 
 
 export function registerUser(req, res) {
     const newUserData = req.body;
+    console.log(req.body)
     const formattedUserData = {
-        name: newUserData.name,
-        password: newUserData.password,
-        age: newUserData.age,
-        phone: newUserData.phone,
-        verified: false
+        [newUserData.email]: {
+            name: newUserData.name,
+            password: newUserData.password,
+            age: newUserData.age,
+            phone: newUserData.phone,
+            verified: false
+        }
     }
 
     let existingUserData = JSON.parse(fs.readFileSync('./users/users.json', 'utf8'))
-    
-    // if a user with that email already exists, throw error
     if (existingUserData[newUserData.email]) {
         res.status = 404;
         return res.send(`${newUserData.email} has already been registered`)
     }
-
-    existingUserData[newUserData.email] = formattedUserData
+    // if the above condition is trigger, the following codes wont be triggered
+    existingUserData = { ...existingUserData, ...formattedUserData }
     fs.writeFileSync('./users/users.json', JSON.stringify(existingUserData, null, 4))
-    res.send(newUserData)
+    res.send(`you registered your user profile! ${newUserData.name}`)
 }
 
 export async function userLogin(req, res) {
@@ -36,6 +36,6 @@ export async function userLogin(req, res) {
         return res.send(`login unsucessful`)
     }
     delete existingUser.password
-    const signedJWT = jwt.sign({...existingUser, email: loginData.email}, process.env.JWT_SECRET)
+    const signedJWT = jwt.sign({ ...existingUser, email: loginData.email }, "shhhhhh")
     return res.send(signedJWT)
 }
