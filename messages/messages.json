@@ -1,5 +1,5 @@
 {
-    "234@123.com": [
+    "kun@kun.com": [
         {
             "user_id": "234@123.com",
             "text": "hi, what's your favorite song?",
@@ -31,6 +31,14 @@
             "targetLanguage": "mandarin",
             "translation": "你好，你最喜欢的电影是什么？ (Nǐ hǎo, nǐ zuì xǐhuān de diànyǐng shì shénme?)",
             "createdAt": 1701839478069
+        },
+        {
+            "user_id": "kun@kun.com",
+            "text": "new message",
+            "sourceLanguage": "English",
+            "targetLanguage": "Spanish",
+            "translation": "Por favor, traduce el nuevo mensaje de inglés a español.",
+            "createdAt": 1702250519478
         }
     ]
 }

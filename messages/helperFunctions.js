@@ -16,5 +16,5 @@ export function recentTranslations(input1, input2) {
         }
         result.push(recentMessage)
     }
-    return result;
+    return result
 }

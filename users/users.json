@@ -7,5 +7,19 @@
             "phone": 1234567890,
             "verified": false
         }
+    },
+    "kun@kun.com": {
+        "name": "kun",
+        "password": "$2b$10$ihFSeIeIbLKnwpTclMDP2.92YxqUihM6mD340S3idWD.yebk.gZjG",
+        "age": 28,
+        "phone": 1234567891,
+        "verified": false
+    },
+    "test@test.com": {
+        "name": "test",
+        "password": "$2b$10$5GXYRVVvl5WMpxYyodeAs.eoPN/q.ft1kmYULEGLnIl6VbppQC7Hi",
+        "age": 123,
+        "phone": 1234567891,
+        "verified": false
     }
 }
