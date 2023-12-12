@@ -12,26 +12,6 @@ export async function hashUserPass(req, res, next) {
 }
 
 export function validateRegisterData(req, res, next) {
-    /*
-    make sure  the request data has:
-    - email
-    - password
-    - phoneNumber
-    - age
-    - name
-    */
-
-    // // one method:
-    // if (
-    //     !req.body.email
-    //     || !req.body.password
-    //     || !require.body.phoneNumber
-    //     || !require.body.age
-    //     || !require.body.name
-    // ) {
-    //     return res.send("could not register user")
-    // }
-
     // alternately: this is more client-friendly + more specific about what's invalid
     if (!req.body.email) {
         return res.send("email is not valid")
@@ -56,6 +36,7 @@ export function validateRegisterData(req, res, next) {
 
 export function validateLoginData(req, res, next) {
     // console.log('hello from middleware 2')
+    console.log("req", req.body)
     if (!req.body.email) {
         return res.send("email is not valid")
     }

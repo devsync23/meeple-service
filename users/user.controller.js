@@ -14,7 +14,7 @@ export function registerUser(req, res) {
     }
 
     let existingUserData = JSON.parse(fs.readFileSync('./users/users.json', 'utf8'))
-    
+
     // if a user with that email already exists, throw error
     if (existingUserData[newUserData.email]) {
         res.status = 404;
@@ -35,6 +35,6 @@ export async function userLogin(req, res) {
         return res.send({ error: true, message: 'invalid credientials' })
     }
     delete existingUser.password
-    const signedJWT = jwt.sign({...existingUser, email: loginData.email}, process.env.JWT_SECRET)
-    return res.send({ jwt: signedJWT })
+    const signedJWT = jwt.sign({ ...existingUser, email: loginData.email }, process.env.JWT_SECRET)
+    return res.send({ jwt: signedJWT, success: true })
 }
