@@ -1,39 +1,16 @@
 {
     "test@test.com": {
         "name": "test",
-        "password": "$2b$10$o5/D0zFy5CgQTi0viLy5Be4VNGUQwX.v.i1cm2QLNz8e3QUW./iDW",
+        "password": "$2b$10$Gs1vdvg3Vq/TQxAZpZVmguu3QtCT0xfbyBWklZRzWYWMOBIEsdhFK",
         "age": 30,
         "phone": 123456789,
         "verified": false
     },
-    "asdf": {
-        "name": "JB",
-        "password": "$2b$10$GQt6Vov.RFRYZKvrRI6DSeTlwDYu95Q8.2pKHD6fAB.l5vPCQvAEK",
-        "age": 30,
-        "phone": 123456789,
+    "test1@test.com": {
+        "name": "test1",
+        "password": "$2b$10$1eGu3CevDzNHxtnMLggBvuESHRvOZ5CiXTnj5jeOZ9We71fhj5D1K",
+        "age": 50,
+        "phone": 2324233333,
         "verified": false
-    },
-    "fdsa": {
-        "name": "JB",
-        "password": "$2b$10$4qGAn7/lL5.2MGQo2TiAt.hUV/lkbJ2q4OQd99ayFQrbB43Hy5BEu",
-        "age": 30,
-        "phone": 123456789,
-        "verified": false
-    },
-    "fdsssssa": {
-        "name": "JB",
-        "password": "$2b$10$4XFpEP1P.S/YWmxO7U3RSORuDK1TiccwgVtogshjhJlYSL3Mq2tSK",
-        "age": 30,
-        "phone": 123456789,
-        "verified": false
-    },
-    "j@j.com": {
-        "j@j.com": {
-            "name": "JB",
-            "password": "$2b$10$xhpkMrGzpTrQG5h7scPAfeRK3WgMXybtm.HE7X4OsNhXHZPvUHh8i",
-            "age": 30,
-            "phone": 1234567890,
-            "verified": false
-        }
     }
 }

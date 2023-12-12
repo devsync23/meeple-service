@@ -2,8 +2,6 @@ import fs from "fs"
 import bcrypt from 'bcrypt'
 import jwt from "jsonwebtoken"
 
-
-
 export function registerUser(req, res) {
     const newUserData = req.body;
     const formattedUserData = {
@@ -15,7 +13,7 @@ export function registerUser(req, res) {
     }
 
     let existingUserData = JSON.parse(fs.readFileSync('./users/users.json', 'utf8'))
-    
+
     // if a user with that email already exists, throw error
     if (existingUserData[newUserData.email]) {
         res.status = 404;
@@ -33,9 +31,9 @@ export async function userLogin(req, res) {
     const passwordCheck = await bcrypt.compare(loginData.password, existingUser.password)
     if (!passwordCheck) {
         res.status = 400;
-        return res.send(`login unsucessful`)
+        return res.send({error: true, message: "login unsucessful"})
     }
     delete existingUser.password
     const signedJWT = jwt.sign({...existingUser, email: loginData.email}, process.env.JWT_SECRET)
-    return res.send(signedJWT)
+    return res.send({jwt: signedJWT})
 }
