@@ -8,9 +8,9 @@
     },
     "test1@test.com": {
         "name": "test1",
-        "password": "$2b$10$1eGu3CevDzNHxtnMLggBvuESHRvOZ5CiXTnj5jeOZ9We71fhj5D1K",
+        "password": "$2b$10$tI7cX7YVGM68lMX6M663SOKlI2LQHNvKf.yJGFcxAvodSs9UHcUPG",
         "age": 50,
-        "phone": 2324233333,
+        "phone": 2324443333,
         "verified": false
     }
 }

@@ -17,12 +17,12 @@ export function registerUser(req, res) {
     // if a user with that email already exists, throw error
     if (existingUserData[newUserData.email]) {
         res.status = 404;
-        return res.send(`${newUserData.email} has already been registered`)
+        return res.send({error: true, message: `${newUserData.email} has already been registered`})
     }
 
     existingUserData[newUserData.email] = formattedUserData
     fs.writeFileSync('./users/users.json', JSON.stringify(existingUserData, null, 4))
-    res.send(newUserData)
+    res.send({newUserData})
 }
 
 export async function userLogin(req, res) {
