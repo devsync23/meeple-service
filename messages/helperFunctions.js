@@ -1,8 +1,7 @@
-export function recentTranslations(input1, input2) {
+export function recentTranslations(messageList, userEmail) {
     const result = []
     let counter = 3;
-    const userEmail = input2
-    const existingUserEmail = input1[userEmail]
+    const existingUserEmail = messageList[userEmail]
     const userEmailLength = existingUserEmail.length
     userEmailLength === 2 ? counter = 2 :
         userEmailLength === 1 ? counter = 1 : counter = 3;
