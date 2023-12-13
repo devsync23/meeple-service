@@ -12,5 +12,12 @@
         "age": 50,
         "phone": 2324443333,
         "verified": false
+    },
+    "test2@test.com": {
+        "name": "test2",
+        "password": "$2b$10$sDqxwyHTFwlbd0rdRQ5j3OLIa9M5mB/ZI.hoAqvw2TVxeYoTaVKma",
+        "age": 55,
+        "phone": 2324243333,
+        "verified": false
     }
 }
