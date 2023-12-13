@@ -1,11 +1,9 @@
 {
-    "j@j.com": {
-        "j@j.com": {
-            "name": "JB",
-            "password": "$2b$10$xhpkMrGzpTrQG5h7scPAfeRK3WgMXybtm.HE7X4OsNhXHZPvUHh8i",
-            "age": 30,
-            "phone": 1234567890,
-            "verified": false
-        }
+    "test@test.com": {
+        "name": "test",
+        "password": "$2b$10$4iMP8.yfaYhrnzFm/K59huLRd5j/jqIfdUAtt0rxhg1vSJFG4aUwC",
+        "age": 30,
+        "phone": 123456789,
+        "verified": false
     }
 }
