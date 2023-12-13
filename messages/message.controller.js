@@ -7,10 +7,11 @@ export function getMessage(req, res) {
     let data = JSON.parse(fs.readFileSync('./messages/messages.json'), 'utf8')
     // check if database is empty
     if(Object.keys(data).length === 0){
-        return res.send('Empty history')
+        return res.send({error: true, message: 'Empty history'})
     }
     // send back response of the latest 3 messages in the history
-    res.send(printMessage(data,req.user.email,3), null, 4)
+    res.send({message: 'test'})
+    // {message: printMessage(data,req.user.email,3)}
 }
 
 export async function createMessage(req, res) {

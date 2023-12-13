@@ -14,16 +14,17 @@ export async function authenticateUserMessages(req, res, next) {
 export function validateUserMessages(req, res, next) {
     let message = req.body;
     if (!message.text){
-        res.send('Invalid message text')
+        res.send({error: true, message: 'Invalid message text'})
     }
     if (!message.sourceLanguage){
-        res.send('Invalid message source language')
+        res.send({error: true, message: 'Invalid message source language'})
     }
     if (!message.targetLanguage){
-        res.send('Invalid message target language')
+        res.send({error: true, message: 'Invalid message target language'})
     }
     if (!message.formality){
-        res.send('Invalid message formality')
+        res.send({error: true, message: 'Invalid message formality'})
+
     }
     next()
 }
