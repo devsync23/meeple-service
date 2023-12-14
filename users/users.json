@@ -7,5 +7,12 @@
             "phone": 1234567890,
             "verified": false
         }
+    },
+    "123@123.com": {
+        "name": "kun",
+        "password": "$2b$10$36WTMplq37MHfbXRkBjg4ek3OIJ84UNWrjlHu6quyYXo8asmQ6iUa",
+        "age": 27,
+        "phone": 123445667,
+        "verified": false
     }
 }
