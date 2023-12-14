@@ -1,13 +1,15 @@
 import fs from "fs"
 import { translator } from "../utilities/translate-api.js"
 
-export function getMessage(req, res) {
-    let existingMessage = JSON.parse(fs.readFileSync('./messages/messages.json'), 'utf8')
-    console.log(existingMessage)
-    if(Object.keys(existingMessage).length === 0){
-        return res.send('Empty history')
+export function getMessages(req, res) {
+    const existingMessages = JSON.parse(fs.readFileSync('./messages/messages.json'), 'utf8')
+    const userMessages = existingMessages[req.user.email]
+    if (!userMessages) {
+        return res.send({ messages: [] })
     }
-    res.send('Here is the message log history' + '\n' + JSON.stringify(existingMessage, null, 4))
+    res.send({
+        messages: userMessages
+    })
 }
 
 export async function createMessage(req, res) {

@@ -6,7 +6,6 @@ export async function authenticateUserMessages(req, res, next) {
     try {
         const userData = jwt.verify(token, process.env.JWT_SECRET)
         req.user = userData
-        console.log("userData>>>>>>>>>>:", userData)
     } catch (err) {
         return res.send(400, "oops, something's wrong, could not authenticate user")
     }
