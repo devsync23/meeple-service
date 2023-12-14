@@ -35,5 +35,5 @@ export async function createMessage(req, res) {
     }
     fs.writeFileSync('./messages/messages.json', JSON.stringify(existingMessage, null, 4))
 
-    res.send(translatedText)
+    res.send({ translation: translatedText })
 }
