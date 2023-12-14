@@ -1,6 +1,7 @@
 import fs from "fs"
 import { translation } from "../translate-api.js"
-import { printMessage } from "../utility.js"
+// import { printMessage } from "../utility.js"
+import { recentTranslations } from "./helperFunctions.js"
 
 export function getMessage(req, res) {
     // read message from database
@@ -10,8 +11,7 @@ export function getMessage(req, res) {
         return res.send({error: true, message: 'Empty history'})
     }
     // send back response of the latest 3 messages in the history
-    res.send({message: 'test'})
-    // {message: printMessage(data,req.user.email,3)}
+    res.send({message: recentTranslations(data,req.user.email)})
 }
 
 export async function createMessage(req, res) {

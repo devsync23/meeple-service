@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken'
 
 export async function authenticateUserMessages(req, res, next) {
     const token = req.headers.authorization
-    const isVerified = await jwt.verify(token, "shhhhhh")
+    const isVerified = await jwt.verify(token, process.env.JWT_SECRET)
     // when the jwt is verified and decrypted,
     // it gives us the user data object
     // then we append this object into the request object to pass on
