@@ -1,7 +1,7 @@
 import express from 'express'
 
 import {
-    getMessages,
+    getMessage,
     createMessage
 } from './message.controller.js'
 
@@ -14,7 +14,7 @@ import {
 const router = express.Router()
 
 router
-    .get('/my-messages', authenticateUserMessages, getMessages)
+    .get('/my-messages', authenticateUserMessages, getMessage)
     .post('/new-message', authenticateUserMessages, validateUserMessages, createMessage)
 
 export default router
