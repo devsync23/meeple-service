@@ -1,12 +1,36 @@
 {
-  "j@j.com": [
-    {
-      "sourceLanguage": "english",
-      "targetLanguage": "spanish",
-      "text": "hello",
-      "createdAt": 12343243243,
-      "author_id": "j@j.com",
-      "translation": "hola"
-    }
-  ]
+    "test@test.com": [
+        {
+            "user_id": "test@test.com",
+            "text": "hi, what's your favorite song?",
+            "sourceLanguage": "english",
+            "targetLanguage": "mandarin",
+            "translation": "你好，你最喜欢的歌曲是什么？ (Nǐ hǎo, nǐ zuì xǐhuān de gēqǔ shì shénme?)",
+            "createdAt": 1701834037101
+        },
+        {
+            "user_id": "test@test.com",
+            "text": "hi, what's your favorite song?",
+            "sourceLanguage": "english",
+            "targetLanguage": "mandarin",
+            "translation": "嗨，你最喜欢的歌曲是什么？ (Hāi, nǐ zuì xǐhuan de gēqǔ shì shénme?)",
+            "createdAt": 1701834126472
+        },
+        {
+            "user_id": "test@test.com",
+            "text": "hi, what's your favorite film?",
+            "sourceLanguage": "english",
+            "targetLanguage": "mandarin",
+            "translation": "你好，你最喜欢的电影是什么？ (Nǐ hǎo, nǐ zuì xǐhuān de diànyǐng shì shénme?)",
+            "createdAt": 1701834381662
+        },
+        {
+            "user_id": "test@test.com",
+            "text": "hi, what's your favorite film?",
+            "sourceLanguage": "english",
+            "targetLanguage": "mandarin",
+            "translation": "你好，你最喜欢的电影是什么？ (Nǐ hǎo, nǐ zuì xǐhuān de diànyǐng shì shénme?)",
+            "createdAt": 1701839478069
+        }
+    ]
 }
