@@ -10,7 +10,6 @@ import {
     validateUserMessages
 } from './message.middleware.js'
 
-
 const router = express.Router()
 
 router

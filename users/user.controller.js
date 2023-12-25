@@ -2,6 +2,7 @@ import fs from "fs"
 import bcrypt from 'bcrypt'
 import jwt from "jsonwebtoken"
 
+// return {newUserData}
 export function registerUser(req, res) {
     const newUserData = req.body;
     const formattedUserData = {
@@ -13,7 +14,6 @@ export function registerUser(req, res) {
     }
 
     let existingUserData = JSON.parse(fs.readFileSync('./users/users.json', 'utf8'))
-
     // if a user with that email already exists, throw error
     if (existingUserData[newUserData.email]) {
         res.status = 404;
@@ -25,6 +25,7 @@ export function registerUser(req, res) {
     res.send({newUserData})
 }
 
+// return {jwt: tokenCode}
 export async function userLogin(req, res) {
     const loginData = req.body
     const existingUser = req.user

@@ -11,26 +11,8 @@ export async function hashUserPass(req, res, next) {
     next();
 }
 
+// return {error: boolean, message: string}
 export function validateRegisterData(req, res, next) {
-    /*
-    make sure  the request data has:
-    - email
-    - password
-    - phoneNumber
-    - age
-    - name
-    */
-
-    // // one method:
-    // if (
-    //     !req.body.email
-    //     || !req.body.password
-    //     || !require.body.phoneNumber
-    //     || !require.body.age
-    //     || !require.body.name
-    // ) {
-    //     return res.send("could not register user")
-    // }
 
     // alternately: this is more client-friendly + more specific about what's invalid
     if (!req.body.email) {
@@ -68,7 +50,6 @@ export function validateLoginData(req, res, next) {
     if (!req.body.password) {
         return res.send({error: true, message: "password is not valid"})
     }
-
         // remember: req & res are middleware objects, they all have access to these
         // adding user key to req {}
     req.user = existingUsers[req.body.email]
